@@ -4,10 +4,12 @@
  */
 package Model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author AdminSena
  */
-public class Modelo {
-    
+public class modelo {
+
 }
