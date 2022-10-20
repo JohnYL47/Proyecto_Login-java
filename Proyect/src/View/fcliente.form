@@ -96,7 +96,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable2">
+        <Component class="javax.swing.JTable" name="JTable_Client">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="0" rowCount="4"/>
@@ -126,11 +126,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                          <Component id="jBguardar_client" min="-2" max="-2" attributes="0"/>
+                          <Component id="JBClient_Guardar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jBmostrar_client" min="-2" max="-2" attributes="0"/>
+                          <Component id="JBClient_Mostrar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jBbuscar_client" min="-2" max="-2" attributes="0"/>
+                          <Component id="JBClient_Buscar" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -141,9 +141,9 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jclient_ID" alignment="0" pref="144" max="32767" attributes="0"/>
-                              <Component id="jclient_nombre" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jclient_apellido" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JTClient_ID" alignment="0" pref="144" max="32767" attributes="0"/>
+                              <Component id="JTClient_Nombre" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JTClient_Apellido" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -156,24 +156,24 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jclient_ID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JTClient_ID" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLid" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jclient_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JTClient_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLApellido" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jclient_apellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JTClient_Apellido" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="70" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jBguardar_client" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBmostrar_client" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBbuscar_client" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JBClient_Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JBClient_Mostrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JBClient_Buscar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
@@ -205,31 +205,31 @@
             <Property name="text" type="java.lang.String" value="Apellido"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jclient_ID">
+        <Component class="javax.swing.JTextField" name="JTClient_ID">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jclient_IDActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTClient_IDActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jclient_nombre">
+        <Component class="javax.swing.JTextField" name="JTClient_Nombre">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jclient_nombreActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTClient_NombreActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jclient_apellido">
+        <Component class="javax.swing.JTextField" name="JTClient_Apellido">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jclient_apellidoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTClient_ApellidoActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="jBguardar_client">
+        <Component class="javax.swing.JButton" name="JBClient_Guardar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
@@ -237,7 +237,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="jBmostrar_client">
+        <Component class="javax.swing.JButton" name="JBClient_Mostrar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mostrar"/>
           </Properties>
@@ -245,12 +245,12 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="jBbuscar_client">
+        <Component class="javax.swing.JButton" name="JBClient_Buscar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buscar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBbuscar_clientActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBClient_BuscarActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
