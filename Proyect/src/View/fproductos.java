@@ -42,7 +42,7 @@ public class fproductos extends javax.swing.JFrame {
         JBProducts_Mostrar = new javax.swing.JButton();
         JBProducts_Buscar = new javax.swing.JButton();
         jLApellido4 = new javax.swing.JLabel();
-        jCBProducts_categoria = new javax.swing.JComboBox<>();
+        JCBProducts_categoria = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,13 +55,13 @@ public class fproductos extends javax.swing.JFrame {
         jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         volver_Producto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        volver_Producto.setText("<");
+        volver_Producto.setText("<<");
         volver_Producto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volver_ProductoActionPerformed(evt);
             }
         });
-        jPanel1.add(volver_Producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 17, 40, 30));
+        jPanel1.add(volver_Producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 17, 50, 30));
 
         JTable_Products.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -131,7 +131,7 @@ public class fproductos extends javax.swing.JFrame {
         jLApellido4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLApellido4.setText("categoria");
 
-        jCBProducts_categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "bebidas", "cereales", "frutas", "dulces", "lacteos", "carnes", " " }));
+        JCBProducts_categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "bebidas", "cereales", "frutas", "dulces", "lacteos", "carnes", " " }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -158,7 +158,7 @@ public class fproductos extends javax.swing.JFrame {
                             .addComponent(JTProducts_ID, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                             .addComponent(JTProducts_Nombre)
                             .addComponent(JTProducts_precio)
-                            .addComponent(jCBProducts_categoria, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(JCBProducts_categoria, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -179,7 +179,7 @@ public class fproductos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLApellido4)
-                    .addComponent(jCBProducts_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JCBProducts_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBProducts_Guardar)
@@ -273,12 +273,12 @@ public class fproductos extends javax.swing.JFrame {
     public javax.swing.JButton JBProducts_Buscar;
     public javax.swing.JButton JBProducts_Guardar;
     public javax.swing.JButton JBProducts_Mostrar;
+    private javax.swing.JComboBox<String> JCBProducts_categoria;
     public javax.swing.JTextField JTProducts_ID;
     public javax.swing.JTextField JTProducts_Nombre;
     public javax.swing.JTextField JTProducts_precio;
     public javax.swing.JTable JTable_Products;
     private javax.swing.JLabel a;
-    private javax.swing.JComboBox<String> jCBProducts_categoria;
     private javax.swing.JLabel jLApellido3;
     private javax.swing.JLabel jLApellido4;
     private javax.swing.JLabel jLNombre3;

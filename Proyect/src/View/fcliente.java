@@ -54,13 +54,13 @@ public class fcliente extends javax.swing.JFrame {
         jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 40));
 
         volver_Cliente.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        volver_Cliente.setText("<");
+        volver_Cliente.setText("<<");
         volver_Cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volver_ClienteActionPerformed(evt);
             }
         });
-        jPanel1.add(volver_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, -1));
+        jPanel1.add(volver_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 986, -1));
 

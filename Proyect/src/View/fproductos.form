@@ -80,7 +80,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&lt;"/>
+            <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volver_ProductoActionPerformed"/>
@@ -90,7 +90,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="17" width="40" height="30"/>
+              <AbsoluteConstraints x="20" y="17" width="50" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -184,7 +184,7 @@
                               <Component id="JTProducts_ID" alignment="0" pref="144" max="32767" attributes="0"/>
                               <Component id="JTProducts_Nombre" alignment="0" max="32767" attributes="0"/>
                               <Component id="JTProducts_precio" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jCBProducts_categoria" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JCBProducts_categoria" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -213,7 +213,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLApellido4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCBProducts_categoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JCBProducts_categoria" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="46" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -310,7 +310,7 @@
             <Property name="text" type="java.lang.String" value="categoria"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jCBProducts_categoria">
+        <Component class="javax.swing.JComboBox" name="JCBProducts_categoria">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="7">

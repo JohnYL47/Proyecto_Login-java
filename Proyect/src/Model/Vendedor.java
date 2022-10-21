@@ -42,5 +42,9 @@ public class Vendedor {
     public void setApellido(String apellido) {
         this.apellidoVents = apellido;
     }
+
+    public void setValueAt(int id, int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

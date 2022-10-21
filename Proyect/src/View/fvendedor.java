@@ -59,13 +59,13 @@ public class fvendedor extends javax.swing.JFrame {
         jPanel3.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         volver_Vendedor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        volver_Vendedor.setText("<");
+        volver_Vendedor.setText("<<");
         volver_Vendedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volver_VendedorActionPerformed(evt);
             }
         });
-        jPanel3.add(volver_Vendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 40, 30));
+        jPanel3.add(volver_Vendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -2, 990, 70));
 
