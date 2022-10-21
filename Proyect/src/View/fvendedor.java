@@ -6,12 +6,12 @@ package View;
 
 /**
  *
- * @author AdminSena
+ * @author SENA
  */
 public class fvendedor extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login
+     * Creates new form fvendedor
      */
     public fvendedor() {
         initComponents();
@@ -27,28 +27,27 @@ public class fvendedor extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        a = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTable_vendedor = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLNombre = new javax.swing.JLabel();
         jLid = new javax.swing.JLabel();
         jLApellido = new javax.swing.JLabel();
-        JTVendedor_Id = new javax.swing.JTextField();
-        JTVendedor_Nombre = new javax.swing.JTextField();
-        JTVendedor_Apellido = new javax.swing.JTextField();
-        JBVendedor_guardar = new javax.swing.JButton();
-        JBVendedor_Mostrar = new javax.swing.JButton();
-        JBVendedor_Buscar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        JTable_Vendedor = new javax.swing.JTable();
+        JTVENDEDOR_ID = new javax.swing.JTextField();
+        JTVENDEDOR_Nombre = new javax.swing.JTextField();
+        JTVENDEDOR_Apellido = new javax.swing.JTextField();
+        JBVENDEDOR_Guardar = new javax.swing.JButton();
+        JBVENDEDOR_Mostrar = new javax.swing.JButton();
+        JBVENDEDOR_Buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 255));
 
-        jLabel1.setFont(new java.awt.Font("Serif", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("formulario de vendedor");
+        a.setFont(new java.awt.Font("Serif", 0, 24)); // NOI18N
+        a.setForeground(new java.awt.Color(255, 255, 255));
+        a.setText("Formulario de Cliente");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -56,16 +55,29 @@ public class fvendedor extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel1)
+                .addComponent(a)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel1)
+                .addComponent(a)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
+
+        JTable_vendedor.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(JTable_vendedor);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "vendedores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
 
@@ -78,59 +90,32 @@ public class fvendedor extends javax.swing.JFrame {
         jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLApellido.setText("Apellido");
 
-<<<<<<< HEAD
-        jTid.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTid.addActionListener(new java.awt.event.ActionListener() {
-=======
-        JTVendedor_Id.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
+        JTVENDEDOR_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTVendedor_IdActionPerformed(evt);
+                JTVENDEDOR_IDActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
-        jTnombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTnombre.addActionListener(new java.awt.event.ActionListener() {
-=======
-        JTVendedor_Nombre.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
+        JTVENDEDOR_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTVendedor_NombreActionPerformed(evt);
+                JTVENDEDOR_NombreActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
-        jTapellido.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTapellido.addActionListener(new java.awt.event.ActionListener() {
-=======
-        JTVendedor_Apellido.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
+        JTVENDEDOR_Apellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTVendedor_ApellidoActionPerformed(evt);
+                JTVENDEDOR_ApellidoActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
-        jBguardar.setText("Guardar");
-        jBguardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBVENDEDOR_Guardar.setText("Guardar");
 
-        jBmostrar.setText("Mostrar");
-        jBmostrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBVENDEDOR_Mostrar.setText("Mostrar");
 
-        jBbuscar.setText("Buscar");
-        jBbuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jBbuscar.addActionListener(new java.awt.event.ActionListener() {
-=======
-        JBVendedor_guardar.setText("Guardar");
-
-        JBVendedor_Mostrar.setText("Mostrar");
-
-        JBVendedor_Buscar.setText("Buscar");
-        JBVendedor_Buscar.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
+        JBVENDEDOR_Buscar.setText("Buscar");
+        JBVENDEDOR_Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBVendedor_BuscarActionPerformed(evt);
+                JBVENDEDOR_BuscarActionPerformed(evt);
             }
         });
 
@@ -139,20 +124,14 @@ public class fvendedor extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addComponent(JBVendedor_guardar)
+                        .addComponent(JBVENDEDOR_Guardar)
                         .addGap(29, 29, 29)
-<<<<<<< HEAD
-                        .addComponent(jBmostrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                        .addComponent(jBbuscar))
-=======
-                        .addComponent(JBVendedor_Mostrar)
+                        .addComponent(JBVENDEDOR_Mostrar)
                         .addGap(30, 30, 30)
-                        .addComponent(JBVendedor_Buscar))
->>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
+                        .addComponent(JBVENDEDOR_Buscar))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -161,53 +140,33 @@ public class fvendedor extends javax.swing.JFrame {
                             .addComponent(jLid))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-<<<<<<< HEAD
-                            .addComponent(jTid, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                            .addComponent(jTnombre)
-                            .addComponent(jTapellido))))
-                .addContainerGap(152, Short.MAX_VALUE))
-=======
-                            .addComponent(JTVendedor_Id, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                            .addComponent(JTVendedor_Nombre)
-                            .addComponent(JTVendedor_Apellido))))
+                            .addComponent(JTVENDEDOR_ID, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                            .addComponent(JTVENDEDOR_Nombre)
+                            .addComponent(JTVENDEDOR_Apellido))))
                 .addContainerGap(149, Short.MAX_VALUE))
->>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTVendedor_Id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTVENDEDOR_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLid))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTVendedor_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTVENDEDOR_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLNombre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLApellido)
-                    .addComponent(JTVendedor_Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JTVENDEDOR_Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBVendedor_guardar)
-                    .addComponent(JBVendedor_Mostrar)
-                    .addComponent(JBVendedor_Buscar))
+                    .addComponent(JBVENDEDOR_Guardar)
+                    .addComponent(JBVENDEDOR_Mostrar)
+                    .addComponent(JBVENDEDOR_Buscar))
                 .addGap(26, 26, 26))
         );
-
-        JTable_Vendedor.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane1.setViewportView(JTable_Vendedor);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -219,7 +178,7 @@ public class fvendedor extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,27 +188,27 @@ public class fvendedor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JTVendedor_IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVendedor_IdActionPerformed
+    private void JTVENDEDOR_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVENDEDOR_IDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTVendedor_IdActionPerformed
+    }//GEN-LAST:event_JTVENDEDOR_IDActionPerformed
 
-    private void JTVendedor_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVendedor_NombreActionPerformed
+    private void JTVENDEDOR_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVENDEDOR_NombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTVendedor_NombreActionPerformed
+    }//GEN-LAST:event_JTVENDEDOR_NombreActionPerformed
 
-    private void JTVendedor_ApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVendedor_ApellidoActionPerformed
+    private void JTVENDEDOR_ApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVENDEDOR_ApellidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTVendedor_ApellidoActionPerformed
+    }//GEN-LAST:event_JTVENDEDOR_ApellidoActionPerformed
 
-    private void JBVendedor_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVendedor_BuscarActionPerformed
+    private void JBVENDEDOR_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVENDEDOR_BuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JBVendedor_BuscarActionPerformed
+    }//GEN-LAST:event_JBVENDEDOR_BuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,7 +236,6 @@ public class fvendedor extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(fvendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -288,16 +246,16 @@ public class fvendedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton JBVendedor_Buscar;
-    public javax.swing.JButton JBVendedor_Mostrar;
-    public javax.swing.JButton JBVendedor_guardar;
-    public javax.swing.JTextField JTVendedor_Apellido;
-    public javax.swing.JTextField JTVendedor_Id;
-    public javax.swing.JTextField JTVendedor_Nombre;
-    private javax.swing.JTable JTable_Vendedor;
+    public javax.swing.JButton JBVENDEDOR_Buscar;
+    public javax.swing.JButton JBVENDEDOR_Guardar;
+    public javax.swing.JButton JBVENDEDOR_Mostrar;
+    public javax.swing.JTextField JTVENDEDOR_Apellido;
+    public javax.swing.JTextField JTVENDEDOR_ID;
+    public javax.swing.JTextField JTVENDEDOR_Nombre;
+    private javax.swing.JTable JTable_vendedor;
+    private javax.swing.JLabel a;
     private javax.swing.JLabel jLApellido;
     private javax.swing.JLabel jLNombre;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLid;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
