@@ -11,5 +11,8 @@ import java.util.ArrayList;
  * @author AdminSena
  */
 public class modelo {
+    protected String user;
+    protected int pass;
+    protected 
 
 }
