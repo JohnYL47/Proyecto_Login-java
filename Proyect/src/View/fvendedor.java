@@ -79,15 +79,17 @@ public class fvendedor extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JTable_vendedor);
 
+        jPanel2.setBackground(new java.awt.Color(51, 102, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "vendedores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLNombre.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLNombre.setText("Nombre");
 
-        jLid.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLid.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLid.setText("Id");
 
-        jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLApellido.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLApellido.setText("Apellido");
 
         JTVENDEDOR_ID.addActionListener(new java.awt.event.ActionListener() {
@@ -108,10 +110,13 @@ public class fvendedor extends javax.swing.JFrame {
             }
         });
 
+        JBVENDEDOR_Guardar.setBackground(new java.awt.Color(204, 204, 204));
         JBVENDEDOR_Guardar.setText("Guardar");
 
+        JBVENDEDOR_Mostrar.setBackground(new java.awt.Color(204, 204, 204));
         JBVENDEDOR_Mostrar.setText("Mostrar");
 
+        JBVENDEDOR_Buscar.setBackground(new java.awt.Color(204, 204, 204));
         JBVENDEDOR_Buscar.setText("Buscar");
         JBVENDEDOR_Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -110,12 +110,18 @@
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="66" red="33" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="vendedores">
               <Color PropertyName="color" blue="ff" green="33" red="0" type="rgb"/>
             </TitledBorder>
           </Border>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
 
@@ -184,7 +190,7 @@
         <Component class="javax.swing.JLabel" name="jLNombre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Candara" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
@@ -192,7 +198,7 @@
         <Component class="javax.swing.JLabel" name="jLid">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Candara" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Id"/>
           </Properties>
@@ -200,7 +206,7 @@
         <Component class="javax.swing.JLabel" name="jLApellido">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Candara" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Apellido"/>
           </Properties>
@@ -231,6 +237,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="JBVENDEDOR_Guardar">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
           <AuxValues>
@@ -239,6 +248,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="JBVENDEDOR_Mostrar">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Mostrar"/>
           </Properties>
           <AuxValues>
@@ -247,6 +259,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="JBVENDEDOR_Buscar">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Buscar"/>
           </Properties>
           <Events>
