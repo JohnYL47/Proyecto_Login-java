@@ -78,30 +78,57 @@ public class fvendedor extends javax.swing.JFrame {
         jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLApellido.setText("Apellido");
 
+<<<<<<< HEAD
+        jTid.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTid.addActionListener(new java.awt.event.ActionListener() {
+=======
         JTVendedor_Id.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTVendedor_IdActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
+        jTnombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTnombre.addActionListener(new java.awt.event.ActionListener() {
+=======
         JTVendedor_Nombre.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTVendedor_NombreActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
+        jTapellido.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTapellido.addActionListener(new java.awt.event.ActionListener() {
+=======
         JTVendedor_Apellido.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTVendedor_ApellidoActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
+        jBguardar.setText("Guardar");
+        jBguardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jBmostrar.setText("Mostrar");
+        jBmostrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jBbuscar.setText("Buscar");
+        jBbuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jBbuscar.addActionListener(new java.awt.event.ActionListener() {
+=======
         JBVendedor_guardar.setText("Guardar");
 
         JBVendedor_Mostrar.setText("Mostrar");
 
         JBVendedor_Buscar.setText("Buscar");
         JBVendedor_Buscar.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBVendedor_BuscarActionPerformed(evt);
             }
@@ -112,14 +139,20 @@ public class fvendedor extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(JBVendedor_guardar)
                         .addGap(29, 29, 29)
+<<<<<<< HEAD
+                        .addComponent(jBmostrar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                        .addComponent(jBbuscar))
+=======
                         .addComponent(JBVendedor_Mostrar)
                         .addGap(30, 30, 30)
                         .addComponent(JBVendedor_Buscar))
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -128,10 +161,17 @@ public class fvendedor extends javax.swing.JFrame {
                             .addComponent(jLid))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+<<<<<<< HEAD
+                            .addComponent(jTid, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                            .addComponent(jTnombre)
+                            .addComponent(jTapellido))))
+                .addContainerGap(152, Short.MAX_VALUE))
+=======
                             .addComponent(JTVendedor_Id, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                             .addComponent(JTVendedor_Nombre)
                             .addComponent(JTVendedor_Apellido))))
                 .addContainerGap(149, Short.MAX_VALUE))
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,7 +219,7 @@ public class fvendedor extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,7 +229,7 @@ public class fvendedor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
