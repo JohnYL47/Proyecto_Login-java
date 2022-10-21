@@ -125,19 +125,25 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTid" max="32767" attributes="0"/>
-                              <Component id="jTnombre" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jTprecio" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jcbcategoria" alignment="0" pref="139" max="32767" attributes="0"/>
+                              <Component id="JTProductos_Id" max="32767" attributes="0"/>
+                              <Component id="JTProductos_Nombre" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JTProductos_Precio" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JPComboBox_Categoria" alignment="0" pref="139" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+<<<<<<< HEAD
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jBguardar" min="-2" max="-2" attributes="0"/>
+=======
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="JBProductos_Guardar" min="-2" max="-2" attributes="0"/>
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jBmostrar" min="-2" max="-2" attributes="0"/>
+                          <Component id="JBProductos_Mostrar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jBbuscar" min="-2" max="-2" attributes="0"/>
+                          <Component id="JBProductos_Buscar" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="63" max="32767" attributes="0"/>
@@ -150,7 +156,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                          <Component id="jTid" min="-2" max="-2" attributes="0"/>
+                          <Component id="JTProductos_Id" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
@@ -160,23 +166,28 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel3" min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jTnombre" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="JTProductos_Nombre" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jTprecio" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JTProductos_Precio" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+<<<<<<< HEAD
                       <Component id="jcbcategoria" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+=======
+                      <Component id="jLabel4" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="JPComboBox_Categoria" alignment="3" min="-2" max="-2" attributes="0"/>
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
                   </Group>
                   <EmptySpace pref="39" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jBguardar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBmostrar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBbuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JBProductos_Guardar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JBProductos_Mostrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JBProductos_Buscar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
@@ -208,6 +219,7 @@
             <Property name="text" type="java.lang.String" value="categoria"/>
           </Properties>
         </Component>
+<<<<<<< HEAD
         <Component class="javax.swing.JTextField" name="jTid">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -216,10 +228,14 @@
               </Border>
             </Property>
           </Properties>
+=======
+        <Component class="javax.swing.JTextField" name="JTProductos_Id">
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTidActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTProductos_IdActionPerformed"/>
           </Events>
         </Component>
+<<<<<<< HEAD
         <Component class="javax.swing.JTextField" name="jTnombre">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -228,8 +244,11 @@
               </Border>
             </Property>
           </Properties>
+=======
+        <Component class="javax.swing.JTextField" name="JTProductos_Nombre">
+>>>>>>> 9b41ae2d6970dc797c8d4f5d9661fd13d89c16c3
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTnombreActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTProductos_NombreActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
@@ -240,7 +259,7 @@
             <Property name="text" type="java.lang.String" value="precio"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbcategoria">
+        <Component class="javax.swing.JComboBox" name="JPComboBox_Categoria">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="7">
@@ -260,13 +279,13 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbcategoriaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JPComboBox_CategoriaActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTprecio">
+        <Component class="javax.swing.JTextField" name="JTProductos_Precio">
           <Properties>
             <Property name="text" type="java.lang.String" value="$"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -276,10 +295,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTprecioActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTProductos_PrecioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBguardar">
+        <Component class="javax.swing.JButton" name="JBProductos_Guardar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -289,7 +308,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jBmostrar">
+        <Component class="javax.swing.JButton" name="JBProductos_Mostrar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mostrar"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -299,10 +318,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBmostrarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBProductos_MostrarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBbuscar">
+        <Component class="javax.swing.JButton" name="JBProductos_Buscar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buscar"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -321,7 +340,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
+        <Component class="javax.swing.JTable" name="JTable_Productos">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="0" rowCount="4"/>
