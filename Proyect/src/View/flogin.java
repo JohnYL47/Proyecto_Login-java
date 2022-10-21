@@ -34,9 +34,9 @@ public class flogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Nombre_login1 = new javax.swing.JTextField();
-        Password_login = new javax.swing.JPasswordField();
-        guardar_login = new javax.swing.JButton();
+        JTNombre_login = new javax.swing.JTextField();
+        JTPassword_login = new javax.swing.JPasswordField();
+        JBGuardar_login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,6 +45,7 @@ public class flogin extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 350));
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 255));
@@ -62,29 +63,21 @@ public class flogin extends javax.swing.JFrame {
         jLabel3.setText("Usuario");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 70, -1));
 
-        Nombre_login1.setBorder(null);
-        jPanel3.add(Nombre_login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 210, 20));
+        JTNombre_login.setBorder(null);
+        jPanel3.add(JTNombre_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 210, 20));
 
-        Password_login.setBorder(null);
-        Password_login.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        Password_login.addActionListener(new java.awt.event.ActionListener() {
+        JTPassword_login.setBorder(null);
+        JTPassword_login.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        JTPassword_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Password_loginActionPerformed(evt);
+                JTPassword_loginActionPerformed(evt);
             }
         });
-        jPanel3.add(Password_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 210, 20));
+        jPanel3.add(JTPassword_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 210, 20));
 
-        guardar_login.setText("Ingresar");
-        guardar_login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        guardar_login.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                guardar_loginMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                guardar_loginMouseExited(evt);
-            }
-        });
-        jPanel3.add(guardar_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
+        JBGuardar_login.setText("Ingresar");
+        JBGuardar_login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel3.add(JBGuardar_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 360, 350));
 
@@ -93,17 +86,9 @@ public class flogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Password_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Password_loginActionPerformed
+    private void JTPassword_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTPassword_loginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Password_loginActionPerformed
-
-    private void guardar_loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardar_loginMouseEntered
-        
-    }//GEN-LAST:event_guardar_loginMouseEntered
-
-    private void guardar_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardar_loginMouseExited
-        
-    }//GEN-LAST:event_guardar_loginMouseExited
+    }//GEN-LAST:event_JTPassword_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,9 +127,9 @@ public class flogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField Nombre_login1;
-    public javax.swing.JPasswordField Password_login;
-    public javax.swing.JButton guardar_login;
+    public javax.swing.JButton JBGuardar_login;
+    public javax.swing.JTextField JTNombre_login;
+    public javax.swing.JPasswordField JTPassword_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

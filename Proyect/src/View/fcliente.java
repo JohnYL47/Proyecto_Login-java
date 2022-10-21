@@ -29,17 +29,17 @@ public class fcliente extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         a = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        JTable_Client = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLNombre = new javax.swing.JLabel();
         jLid = new javax.swing.JLabel();
         jLApellido = new javax.swing.JLabel();
-        jclient_ID = new javax.swing.JTextField();
-        jclient_nombre = new javax.swing.JTextField();
-        jclient_apellido = new javax.swing.JTextField();
-        jBguardar_client = new javax.swing.JButton();
-        jBmostrar_client = new javax.swing.JButton();
-        jBbuscar_client = new javax.swing.JButton();
+        JTClient_ID = new javax.swing.JTextField();
+        JTClient_Nombre = new javax.swing.JTextField();
+        JTClient_Apellido = new javax.swing.JTextField();
+        JBClient_Guardar = new javax.swing.JButton();
+        JBClient_Mostrar = new javax.swing.JButton();
+        JBClient_Buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,7 +66,7 @@ public class fcliente extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        JTable_Client.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -77,7 +77,7 @@ public class fcliente extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable2);
+        jScrollPane1.setViewportView(JTable_Client);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
 
@@ -90,32 +90,32 @@ public class fcliente extends javax.swing.JFrame {
         jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLApellido.setText("Apellido");
 
-        jclient_ID.addActionListener(new java.awt.event.ActionListener() {
+        JTClient_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jclient_IDActionPerformed(evt);
+                JTClient_IDActionPerformed(evt);
             }
         });
 
-        jclient_nombre.addActionListener(new java.awt.event.ActionListener() {
+        JTClient_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jclient_nombreActionPerformed(evt);
+                JTClient_NombreActionPerformed(evt);
             }
         });
 
-        jclient_apellido.addActionListener(new java.awt.event.ActionListener() {
+        JTClient_Apellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jclient_apellidoActionPerformed(evt);
+                JTClient_ApellidoActionPerformed(evt);
             }
         });
 
-        jBguardar_client.setText("Guardar");
+        JBClient_Guardar.setText("Guardar");
 
-        jBmostrar_client.setText("Mostrar");
+        JBClient_Mostrar.setText("Mostrar");
 
-        jBbuscar_client.setText("Buscar");
-        jBbuscar_client.addActionListener(new java.awt.event.ActionListener() {
+        JBClient_Buscar.setText("Buscar");
+        JBClient_Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBbuscar_clientActionPerformed(evt);
+                JBClient_BuscarActionPerformed(evt);
             }
         });
 
@@ -127,11 +127,11 @@ public class fcliente extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addComponent(jBguardar_client)
+                        .addComponent(JBClient_Guardar)
                         .addGap(29, 29, 29)
-                        .addComponent(jBmostrar_client)
+                        .addComponent(JBClient_Mostrar)
                         .addGap(30, 30, 30)
-                        .addComponent(jBbuscar_client))
+                        .addComponent(JBClient_Buscar))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -140,9 +140,9 @@ public class fcliente extends javax.swing.JFrame {
                             .addComponent(jLid))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jclient_ID, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                            .addComponent(jclient_nombre)
-                            .addComponent(jclient_apellido))))
+                            .addComponent(JTClient_ID, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                            .addComponent(JTClient_Nombre)
+                            .addComponent(JTClient_Apellido))))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -150,21 +150,21 @@ public class fcliente extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jclient_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTClient_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLid))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jclient_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTClient_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLNombre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLApellido)
-                    .addComponent(jclient_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JTClient_Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBguardar_client)
-                    .addComponent(jBmostrar_client)
-                    .addComponent(jBbuscar_client))
+                    .addComponent(JBClient_Guardar)
+                    .addComponent(JBClient_Mostrar)
+                    .addComponent(JBClient_Buscar))
                 .addGap(26, 26, 26))
         );
 
@@ -194,21 +194,21 @@ public class fcliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jclient_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jclient_IDActionPerformed
+    private void JTClient_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTClient_IDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jclient_IDActionPerformed
+    }//GEN-LAST:event_JTClient_IDActionPerformed
 
-    private void jclient_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jclient_nombreActionPerformed
+    private void JTClient_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTClient_NombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jclient_nombreActionPerformed
+    }//GEN-LAST:event_JTClient_NombreActionPerformed
 
-    private void jclient_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jclient_apellidoActionPerformed
+    private void JTClient_ApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTClient_ApellidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jclient_apellidoActionPerformed
+    }//GEN-LAST:event_JTClient_ApellidoActionPerformed
 
-    private void jBbuscar_clientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBbuscar_clientActionPerformed
+    private void JBClient_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBClient_BuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBbuscar_clientActionPerformed
+    }//GEN-LAST:event_JBClient_BuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,19 +246,19 @@ public class fcliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton JBClient_Buscar;
+    public javax.swing.JButton JBClient_Guardar;
+    public javax.swing.JButton JBClient_Mostrar;
+    public javax.swing.JTextField JTClient_Apellido;
+    public javax.swing.JTextField JTClient_ID;
+    public javax.swing.JTextField JTClient_Nombre;
+    private javax.swing.JTable JTable_Client;
     private javax.swing.JLabel a;
-    public javax.swing.JButton jBbuscar_client;
-    public javax.swing.JButton jBguardar_client;
-    public javax.swing.JButton jBmostrar_client;
     private javax.swing.JLabel jLApellido;
     private javax.swing.JLabel jLNombre;
     private javax.swing.JLabel jLid;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable2;
-    public javax.swing.JTextField jclient_ID;
-    public javax.swing.JTextField jclient_apellido;
-    public javax.swing.JTextField jclient_nombre;
     // End of variables declaration//GEN-END:variables
 }

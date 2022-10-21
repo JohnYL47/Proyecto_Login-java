@@ -32,14 +32,14 @@ public class fvendedor extends javax.swing.JFrame {
         jLNombre = new javax.swing.JLabel();
         jLid = new javax.swing.JLabel();
         jLApellido = new javax.swing.JLabel();
-        jTid = new javax.swing.JTextField();
-        jTnombre = new javax.swing.JTextField();
-        jTapellido = new javax.swing.JTextField();
-        jBguardar = new javax.swing.JButton();
-        jBmostrar = new javax.swing.JButton();
-        jBbuscar = new javax.swing.JButton();
+        JTVendedor_Id = new javax.swing.JTextField();
+        JTVendedor_Nombre = new javax.swing.JTextField();
+        JTVendedor_Apellido = new javax.swing.JTextField();
+        JBVendedor_guardar = new javax.swing.JButton();
+        JBVendedor_Mostrar = new javax.swing.JButton();
+        JBVendedor_Buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        JTable_Vendedor = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -78,32 +78,32 @@ public class fvendedor extends javax.swing.JFrame {
         jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLApellido.setText("Apellido");
 
-        jTid.addActionListener(new java.awt.event.ActionListener() {
+        JTVendedor_Id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTidActionPerformed(evt);
+                JTVendedor_IdActionPerformed(evt);
             }
         });
 
-        jTnombre.addActionListener(new java.awt.event.ActionListener() {
+        JTVendedor_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTnombreActionPerformed(evt);
+                JTVendedor_NombreActionPerformed(evt);
             }
         });
 
-        jTapellido.addActionListener(new java.awt.event.ActionListener() {
+        JTVendedor_Apellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTapellidoActionPerformed(evt);
+                JTVendedor_ApellidoActionPerformed(evt);
             }
         });
 
-        jBguardar.setText("Guardar");
+        JBVendedor_guardar.setText("Guardar");
 
-        jBmostrar.setText("Mostrar");
+        JBVendedor_Mostrar.setText("Mostrar");
 
-        jBbuscar.setText("Buscar");
-        jBbuscar.addActionListener(new java.awt.event.ActionListener() {
+        JBVendedor_Buscar.setText("Buscar");
+        JBVendedor_Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBbuscarActionPerformed(evt);
+                JBVendedor_BuscarActionPerformed(evt);
             }
         });
 
@@ -115,11 +115,11 @@ public class fvendedor extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addComponent(jBguardar)
+                        .addComponent(JBVendedor_guardar)
                         .addGap(29, 29, 29)
-                        .addComponent(jBmostrar)
+                        .addComponent(JBVendedor_Mostrar)
                         .addGap(30, 30, 30)
-                        .addComponent(jBbuscar))
+                        .addComponent(JBVendedor_Buscar))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -128,9 +128,9 @@ public class fvendedor extends javax.swing.JFrame {
                             .addComponent(jLid))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTid, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                            .addComponent(jTnombre)
-                            .addComponent(jTapellido))))
+                            .addComponent(JTVendedor_Id, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                            .addComponent(JTVendedor_Nombre)
+                            .addComponent(JTVendedor_Apellido))))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -138,25 +138,25 @@ public class fvendedor extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTVendedor_Id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLid))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTVendedor_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLNombre))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLApellido)
-                    .addComponent(jTapellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JTVendedor_Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBguardar)
-                    .addComponent(jBmostrar)
-                    .addComponent(jBbuscar))
+                    .addComponent(JBVendedor_guardar)
+                    .addComponent(JBVendedor_Mostrar)
+                    .addComponent(JBVendedor_Buscar))
                 .addGap(26, 26, 26))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        JTable_Vendedor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -167,7 +167,7 @@ public class fvendedor extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(JTable_Vendedor);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -195,21 +195,21 @@ public class fvendedor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTidActionPerformed
+    private void JTVendedor_IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVendedor_IdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTidActionPerformed
+    }//GEN-LAST:event_JTVendedor_IdActionPerformed
 
-    private void jTnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTnombreActionPerformed
+    private void JTVendedor_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVendedor_NombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTnombreActionPerformed
+    }//GEN-LAST:event_JTVendedor_NombreActionPerformed
 
-    private void jTapellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTapellidoActionPerformed
+    private void JTVendedor_ApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVendedor_ApellidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTapellidoActionPerformed
+    }//GEN-LAST:event_JTVendedor_ApellidoActionPerformed
 
-    private void jBbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBbuscarActionPerformed
+    private void JBVendedor_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVendedor_BuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBbuscarActionPerformed
+    }//GEN-LAST:event_JBVendedor_BuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,9 +248,13 @@ public class fvendedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBbuscar;
-    public javax.swing.JButton jBguardar;
-    public javax.swing.JButton jBmostrar;
+    public javax.swing.JButton JBVendedor_Buscar;
+    public javax.swing.JButton JBVendedor_Mostrar;
+    public javax.swing.JButton JBVendedor_guardar;
+    public javax.swing.JTextField JTVendedor_Apellido;
+    public javax.swing.JTextField JTVendedor_Id;
+    public javax.swing.JTextField JTVendedor_Nombre;
+    private javax.swing.JTable JTable_Vendedor;
     private javax.swing.JLabel jLApellido;
     private javax.swing.JLabel jLNombre;
     private javax.swing.JLabel jLabel1;
@@ -258,9 +262,5 @@ public class fvendedor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    public javax.swing.JTextField jTapellido;
-    public javax.swing.JTextField jTid;
-    public javax.swing.JTextField jTnombre;
     // End of variables declaration//GEN-END:variables
 }
