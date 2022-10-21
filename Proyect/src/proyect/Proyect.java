@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package proyect;
-
+import View.flogin;
 /**
  *
  * @author AdminSena
@@ -11,11 +11,10 @@ package proyect;
 
 public class Proyect {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        //RUN Algoritmo
+       flogin login= new flogin();
+       
     }
     
 }

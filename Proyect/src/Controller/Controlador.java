@@ -3,23 +3,44 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controller;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import View.flogin;
+import Model.modelo;
+import java.util.*;
+import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
 
-/**
- * import View.flogin; import View.fcliente; import View.fproducto; import
- * View.fvendedor;
- */
-public class Controlador {
-    /**
-     *  ESTE ES EL ALGORITMO PARA EL LOGIN
-     * if (e.getSource() == this.flogin ) { usuario =
-     * this.flogin.JTNombre_login.getText(); password = this.flogin.JTPassword_login.getText();
-     * boolean off = false;
-     *
-     * if(usuario.equals("admin") && passwordd.equals("123")){
-     * admin.setVisible(true); } if(off = false){
-     * JOptionPane.showMessageDialog(null, "no esta registrado este usuario");     *
-     * }
-     * limpiar();     *
-     * }
-     */
+public class Controlador implements ActionListener {
+    flogin vistalogin= new flogin();
+    private String user;
+    private String password;
+ 
+    
+    public Controlador(){
+    this.vistalogin.JTNombre_login.addActionListener(this);
+    this.vistalogin.JTPassword_login.addActionListener(this);
+} 
+    public void iniciar(){
+        this.vistalogin.setVisible(true);
+        
+    
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
+  
 }
