@@ -28,8 +28,7 @@ public class fcliente extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         a = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        JTable_Client = new javax.swing.JTable();
+        volver_Cliente = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLNombre = new javax.swing.JLabel();
         jLid = new javax.swing.JLabel();
@@ -40,77 +39,73 @@ public class fcliente extends javax.swing.JFrame {
         JBClient_Guardar = new javax.swing.JButton();
         JBClient_Mostrar = new javax.swing.JButton();
         JBClient_Buscar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTable_Cliente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         a.setFont(new java.awt.Font("Serif", 0, 24)); // NOI18N
         a.setForeground(new java.awt.Color(255, 255, 255));
         a.setText("Formulario de Cliente");
+        jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(a)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(a)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-
-        JTable_Client.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
+        volver_Cliente.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        volver_Cliente.setText("<");
+        volver_Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volver_ClienteActionPerformed(evt);
             }
-        ));
-        jScrollPane1.setViewportView(JTable_Client);
+        });
+        jPanel1.add(volver_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, -1));
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 986, -1));
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLNombre.setText("Nombre");
+        jPanel2.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 124, -1, -1));
 
         jLid.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLid.setText("Id");
+        jPanel2.add(jLid, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 90, -1, -1));
 
         jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLApellido.setText("Apellido");
+        jPanel2.add(jLApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 158, -1, -1));
 
         JTClient_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_IDActionPerformed(evt);
             }
         });
+        jPanel2.add(JTClient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 90, 144, -1));
 
         JTClient_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_NombreActionPerformed(evt);
             }
         });
+        jPanel2.add(JTClient_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 124, 144, -1));
 
         JTClient_Apellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_ApellidoActionPerformed(evt);
             }
         });
+        jPanel2.add(JTClient_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 158, 144, -1));
 
         JBClient_Guardar.setText("Guardar");
+        jPanel2.add(JBClient_Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         JBClient_Mostrar.setText("Mostrar");
+        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
         JBClient_Buscar.setText("Buscar");
         JBClient_Buscar.addActionListener(new java.awt.event.ActionListener() {
@@ -118,78 +113,36 @@ public class fcliente extends javax.swing.JFrame {
                 JBClient_BuscarActionPerformed(evt);
             }
         });
+        jPanel2.add(JBClient_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(JBClient_Guardar)
-                        .addGap(29, 29, 29)
-                        .addComponent(JBClient_Mostrar)
-                        .addGap(30, 30, 30)
-                        .addComponent(JBClient_Buscar))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLApellido)
-                            .addComponent(jLNombre)
-                            .addComponent(jLid))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(JTClient_ID, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                            .addComponent(JTClient_Nombre)
-                            .addComponent(JTClient_Apellido))))
-                .addContainerGap(149, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTClient_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLid))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTClient_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLNombre))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLApellido)
-                    .addComponent(JTClient_Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBClient_Guardar)
-                    .addComponent(JBClient_Mostrar)
-                    .addComponent(JBClient_Buscar))
-                .addGap(26, 26, 26))
-        );
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 102, 310, 280));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        JTable_Cliente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nombre", "Apellido"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(JTable_Cliente);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -209,6 +162,10 @@ public class fcliente extends javax.swing.JFrame {
     private void JBClient_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBClient_BuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBClient_BuscarActionPerformed
+
+    private void volver_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_ClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_volver_ClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,7 +209,7 @@ public class fcliente extends javax.swing.JFrame {
     public javax.swing.JTextField JTClient_Apellido;
     public javax.swing.JTextField JTClient_ID;
     public javax.swing.JTextField JTClient_Nombre;
-    private javax.swing.JTable JTable_Client;
+    public javax.swing.JTable JTable_Cliente;
     private javax.swing.JLabel a;
     private javax.swing.JLabel jLApellido;
     private javax.swing.JLabel jLNombre;
@@ -260,5 +217,6 @@ public class fcliente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JButton volver_Cliente;
     // End of variables declaration//GEN-END:variables
 }

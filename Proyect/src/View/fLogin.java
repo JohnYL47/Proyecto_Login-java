@@ -26,36 +26,42 @@ public class fLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        JTPassword_login = new javax.swing.JTextField();
+        JTPassword_login = new javax.swing.JPanel();
         JTNombre_login = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         JBGuardar_login = new javax.swing.JButton();
+        JPassword_login = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
-        jPanel1.setForeground(new java.awt.Color(153, 204, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(JTPassword_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 140, -1));
-        jPanel1.add(JTNombre_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 140, -1));
+        JTPassword_login.setBackground(new java.awt.Color(153, 255, 255));
+        JTPassword_login.setForeground(new java.awt.Color(153, 204, 255));
+        JTPassword_login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        JTPassword_login.add(JTNombre_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 140, -1));
 
+        jLabel1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel1.setText("Password");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        JTPassword_login.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
         jLabel2.setText("Usuario");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+        JTPassword_login.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         jLabel3.setText("Ingresar Sesion");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
+        JTPassword_login.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
 
+        JBGuardar_login.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         JBGuardar_login.setText("Ingresar");
-        jPanel1.add(JBGuardar_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
+        JBGuardar_login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBGuardar_login.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JTPassword_login.add(JBGuardar_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
+        JTPassword_login.add(JPassword_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 140, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+        getContentPane().add(JTPassword_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -97,11 +103,11 @@ public class fLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton JBGuardar_login;
+    public javax.swing.JPasswordField JPassword_login;
     public javax.swing.JTextField JTNombre_login;
-    public javax.swing.JTextField JTPassword_login;
+    public javax.swing.JPanel JTPassword_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

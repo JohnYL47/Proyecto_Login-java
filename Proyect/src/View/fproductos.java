@@ -28,6 +28,7 @@ public class fproductos extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         a = new javax.swing.JLabel();
+        volver_Producto = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_Products = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
@@ -46,39 +47,45 @@ public class fproductos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         a.setFont(new java.awt.Font("Serif", 0, 24)); // NOI18N
         a.setForeground(new java.awt.Color(255, 255, 255));
-        a.setText("Formulario de Cliente");
+        a.setText("Formulario de Producto");
+        jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(a)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(a)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
+        volver_Producto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        volver_Producto.setText("<");
+        volver_Producto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volver_ProductoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(volver_Producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 17, 40, 30));
 
         JTable_Products.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {},
-                {},
-                {},
-                {}
+
             },
             new String [] {
-
+                "ID", "Nombre", "Precio", "Categoria"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(JTable_Products);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "productos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
@@ -196,12 +203,12 @@ public class fproductos extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -222,6 +229,10 @@ public class fproductos extends javax.swing.JFrame {
     private void JBProducts_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBProducts_BuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBProducts_BuscarActionPerformed
+
+    private void volver_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_ProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_volver_ProductoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -265,7 +276,7 @@ public class fproductos extends javax.swing.JFrame {
     public javax.swing.JTextField JTProducts_ID;
     public javax.swing.JTextField JTProducts_Nombre;
     public javax.swing.JTextField JTProducts_precio;
-    private javax.swing.JTable JTable_Products;
+    public javax.swing.JTable JTable_Products;
     private javax.swing.JLabel a;
     private javax.swing.JComboBox<String> jCBProducts_categoria;
     private javax.swing.JLabel jLApellido3;
@@ -275,5 +286,6 @@ public class fproductos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JButton volver_Producto;
     // End of variables declaration//GEN-END:variables
 }
