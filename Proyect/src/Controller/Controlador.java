@@ -3,44 +3,41 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controller;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import View.flogin;
 import Model.modelo;
+import View.fLogin;
+import View.fcliente;
+import View.fproductos;
+import View.fvendedor;
 import java.util.*;
 import javax.swing.JOptionPane;
-import javax.swing.WindowConstants;
 
 public class Controlador implements ActionListener {
-    flogin vistalogin= new flogin();
+
+    ArrayList<modelo> listaModel = new ArrayList<modelo>();
+    fLogin vistalogin = new fLogin();
+    fcliente clientes = new fcliente();
+    fproductos productos = new fproductos();
+    fvendedor vendedor = new fvendedor();
+
+    //privados
     private String user;
     private String password;
- 
-    
-    public Controlador(){
-    this.vistalogin.JTNombre_login.addActionListener(this);
-    this.vistalogin.JTPassword_login.addActionListener(this);
-} 
-    public void iniciar(){
+
+    public Controlador(fLogin login) {
+        this.vistalogin.JTNombre_login.addActionListener(this);
+        this.vistalogin.JTPassword_login.addActionListener(this);
+    }
+
+    public void iniciar() {
         this.vistalogin.setVisible(true);
-        
-    
-    
-}
-    
-    
-    
-    
-    
-    
-    
-    
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
     }
-    
-    
-  
 }
