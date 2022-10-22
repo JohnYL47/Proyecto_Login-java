@@ -6,22 +6,18 @@ package Controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import Model.Productos;
-import Model.Vendedor;
-import Model.Clientes;
-import java.util.ArrayList;
-import Model.ModelPerson;
-import View.fLogin;
-import View.fcliente;
-import View.fproductos;
-import View.fvendedor;
-import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import java.util.ArrayList;
+import Model.*;
+import View.*;
+import java.util.*;
+
 
 public class Controlador implements ActionListener {
 
-    ArrayList<ModelPerson> Ingreso_list = new ArrayList<>();
+    ArrayList<Login> list_Login = new ArrayList<>();
+    ArrayList<ModelPerson> list_Person = new ArrayList<>();
     ArrayList<Productos> lista_Prod = new ArrayList<>();
     ArrayList<Vendedor> lista_Vended = new ArrayList<>();
     ArrayList<Clientes> lista_Client = new ArrayList<>();
@@ -32,22 +28,19 @@ public class Controlador implements ActionListener {
     fvendedor vendedor = new fvendedor();
 
     //--------------List--------------------------//
-    //SESION DE TABLAS
+    //SESION
     private String usuario;
     private String password;
-    //TABLA DE VENDEDOR
-    private int IDVents;
-    private String usuarioVents;
-    private String apellidoVents;
+    //TABLA DE PERSON,CLIENTE,VENDEDOR
+    private int Id;
+    private String Nombre;
+    private String Apellido;
     //TABLA PRODUCTOS
     private int Id_Product;
     private String Nombre_Product;
     private String Precio_Product;
     private String Categoria_Product;
-    //TABLA CLIENTES
-    private int IdClient;
-    private String NombreClient;
-    private String ApellidoClient;
+    //TABLAS
     private JTable JTable_Vendedor;
     private JTable JTable_Cliente;
     private JTable JTable_Products;
@@ -92,33 +85,37 @@ public class Controlador implements ActionListener {
             limpiar();
         }
         //CLIENTE
+//Guardar
         if (e.getSource() == this.clientes.JBClient_Guardar) {
-            IdClient = Integer.parseInt(this.clientes.JTClient_ID.getText());
-            NombreClient = this.clientes.JTClient_Nombre.getText();
-            ApellidoClient = this.clientes.JTClient_Apellido.getText();
+            Id = Integer.parseInt(this.clientes.JTClient_ID.getText());
+            Nombre = this.clientes.JTClient_Nombre.getText();
+            Apellido = this.clientes.JTClient_Apellido.getText();
 
-            lista_Vended.add(new Vendedor(IDVents, usuario, apellidoVents));
+            lista_Vended.add(new Vendedor(Id, usuario, Apellido));
             cargartablaClient(JTable_Cliente, lista_Client);
         }
+//Mostrar
         if (e.getSource() == this.clientes.JBClient_Mostrar) {
             //
         }
         //VENDEDOR
+//Guardar
         if (e.getSource() == this.vendedor.JBVENDEDOR_Guardar) {
-            IDVents = Integer.parseInt(this.vendedor.JTVENDEDOR_ID.getText());
-            usuarioVents = this.vendedor.JTVENDEDOR_Nombre.getText();
-            apellidoVents = this.vendedor.JTVENDEDOR_Apellido.getText();
+            Id = Integer.parseInt(this.vendedor.JTVENDEDOR_ID.getText());
+            Nombre = this.vendedor.JTVENDEDOR_Nombre.getText();
+            Apellido = this.vendedor.JTVENDEDOR_Apellido.getText();
 
-            lista_Vended.add(new Vendedor(IDVents, usuario, apellidoVents));
+            lista_Vended.add(new Vendedor(Id, usuario, Apellido));
             cargartablaVent(JTable_Vendedor, lista_Vended);
         }
         //PRODUCTO
+//Guardar
         if (e.getSource() == this.productos.JBProducts_Guardar) {
             Id_Product = Integer.parseInt(this.productos.JTProducts_ID.getText());
             Nombre_Product = this.productos.JTProducts_Nombre.getText();
             Precio_Product = this.productos.JTProducts_precio.getText();
 
-            lista_Vended.add(new Vendedor(IDVents, usuario, apellidoVents));
+            lista_Vended.add(new Vendedor(Id, usuario, Apellido));
             cargartablaProduct(JTable_Products, lista_Prod);
         }
 
@@ -144,7 +141,7 @@ public class Controlador implements ActionListener {
 
         }
     }
-    
+
     private void cargartablaVent(JTable JTable_Vendedor, ArrayList<Vendedor> ListVent) {
         for (int i = 0; i < ListVent.size(); i++) {
             JTable_Vendedor.setValueAt(ListVent.get(i).getId(), i, 0);
