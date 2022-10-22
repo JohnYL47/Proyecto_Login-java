@@ -3,23 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Model;
-
-//import java.util.ArrayList;
 /**
  *
- * @author AdminSena
+ * @author SENA
  */
-public class IngresoTb {
-    
+public class Login {
     protected String usuario;
     protected String password;
-    
-    public IngresoTb(String usuario, String password) {
-        
+
+    public Login(String usuario, String password) {
         this.usuario = usuario;
         this.password = password;
-        
     }
+
     public String getUsuario() {
         return usuario;
     }
@@ -35,4 +31,5 @@ public class IngresoTb {
     public void setPassword(String password) {
         this.password = password;
     }
+    
 }

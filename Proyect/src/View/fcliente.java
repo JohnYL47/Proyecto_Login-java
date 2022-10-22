@@ -38,7 +38,6 @@ public class fcliente extends javax.swing.JFrame {
         JTClient_Apellido = new javax.swing.JTextField();
         JBClient_Guardar = new javax.swing.JButton();
         JBClient_Mostrar = new javax.swing.JButton();
-        JBClient_Buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_Cliente = new javax.swing.JTable();
 
@@ -102,18 +101,10 @@ public class fcliente extends javax.swing.JFrame {
         jPanel2.add(JTClient_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 158, 144, -1));
 
         JBClient_Guardar.setText("Guardar");
-        jPanel2.add(JBClient_Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+        jPanel2.add(JBClient_Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
 
         JBClient_Mostrar.setText("Mostrar");
-        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
-
-        JBClient_Buscar.setText("Buscar");
-        JBClient_Buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBClient_BuscarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(JBClient_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 102, 310, 280));
 
@@ -159,10 +150,6 @@ public class fcliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTClient_ApellidoActionPerformed
 
-    private void JBClient_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBClient_BuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JBClient_BuscarActionPerformed
-
     private void volver_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_ClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_volver_ClienteActionPerformed
@@ -203,7 +190,6 @@ public class fcliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton JBClient_Buscar;
     public javax.swing.JButton JBClient_Guardar;
     public javax.swing.JButton JBClient_Mostrar;
     public javax.swing.JTextField JTClient_Apellido;

@@ -10,7 +10,7 @@ import Model.Productos;
 import Model.Vendedor;
 import Model.Clientes;
 import java.util.ArrayList;
-import Model.IngresoTb;
+import Model.ModelPerson;
 import View.fLogin;
 import View.fcliente;
 import View.fproductos;
@@ -21,7 +21,7 @@ import javax.swing.JTable;
 
 public class Controlador implements ActionListener {
 
-    ArrayList<IngresoTb> Ingreso_list = new ArrayList<>();
+    ArrayList<ModelPerson> Ingreso_list = new ArrayList<>();
     ArrayList<Productos> lista_Prod = new ArrayList<>();
     ArrayList<Vendedor> lista_Vended = new ArrayList<>();
     ArrayList<Clientes> lista_Client = new ArrayList<>();
@@ -52,12 +52,10 @@ public class Controlador implements ActionListener {
     private JTable JTable_Cliente;
     private JTable JTable_Products;
     //------------------------------------------//
-    
-    
+
     public Controlador(fLogin login) {
         //Falta Admin
         this.vistalogin.JBGuardar_login.addActionListener(this);
-        this.clientes.JBClient_Buscar.addActionListener(this);
         this.clientes.JBClient_Guardar.addActionListener(this);
         this.clientes.JBClient_Mostrar.addActionListener(this);
         this.productos.JBProducts_Buscar.addActionListener(this);
@@ -94,12 +92,6 @@ public class Controlador implements ActionListener {
             limpiar();
         }
         //CLIENTE
-        if (e.getSource() == this.clientes.JBClient_Buscar) {
-            //
-        }
-        if (e.getSource() == this.clientes.JBClient_Mostrar) {
-            //
-        }
         if (e.getSource() == this.clientes.JBClient_Guardar) {
             IdClient = Integer.parseInt(this.clientes.JTClient_ID.getText());
             NombreClient = this.clientes.JTClient_Nombre.getText();
@@ -107,6 +99,9 @@ public class Controlador implements ActionListener {
 
             lista_Vended.add(new Vendedor(IDVents, usuario, apellidoVents));
             cargartablaClient(JTable_Cliente, lista_Client);
+        }
+        if (e.getSource() == this.clientes.JBClient_Mostrar) {
+            //
         }
         //VENDEDOR
         if (e.getSource() == this.vendedor.JBVENDEDOR_Guardar) {
@@ -141,27 +136,27 @@ public class Controlador implements ActionListener {
         this.vendedor.JTVENDEDOR_Nombre.setText("");
     } //Limpiar --Admin
 
+    private void cargartablaClient(JTable JTable_Cliente, ArrayList<Clientes> ListClient) {
+        for (int i = 0; i < ListClient.size(); i++) {
+            JTable_Cliente.setValueAt(ListClient.get(i).getId(), i, 0);
+            JTable_Cliente.setValueAt(ListClient.get(i).getNombre(), i, 1);
+            JTable_Cliente.setValueAt(ListClient.get(i).getApellido(), i, 2);
+
+        }
+    }
+    
     private void cargartablaVent(JTable JTable_Vendedor, ArrayList<Vendedor> ListVent) {
         for (int i = 0; i < ListVent.size(); i++) {
-            JTable_Vendedor.setValueAt(ListVent.get(i).getID(), i, 0);
-            JTable_Vendedor.setValueAt(ListVent.get(i).getID(), i, 1);
-            JTable_Vendedor.setValueAt(ListVent.get(i).getID(), i, 2);
+            JTable_Vendedor.setValueAt(ListVent.get(i).getId(), i, 0);
+            JTable_Vendedor.setValueAt(ListVent.get(i).getNombre(), i, 1);
+            JTable_Vendedor.setValueAt(ListVent.get(i).getApellido(), i, 2);
 
         }
     } //Carga la tabla creo...
 
-    private void cargartablaClient(JTable JTable_Cliente, ArrayList<Clientes> ListClient) {
-        for (int i = 0; i < ListClient.size(); i++) {
-            JTable_Cliente.setValueAt(ListClient.get(i).getIdClient(), i, 0);
-            JTable_Cliente.setValueAt(ListClient.get(i).getNombreClient(), i, 1);
-            JTable_Cliente.setValueAt(ListClient.get(i).getApellidoClient(), i, 2);
-
-        }
-    }
-
     private void cargartablaProduct(JTable JTable_Products, ArrayList<Productos> ListProd) {
         for (int i = 0; i < ListProd.size(); i++) {
-            
+
             JTable_Products.setValueAt(ListProd.get(i).getIdTb(), i, 0);
             JTable_Products.setValueAt(ListProd.get(i).getNombreTb(), i, 1);
             JTable_Products.setValueAt(ListProd.get(i).getPrecioTb(), i, 2);
