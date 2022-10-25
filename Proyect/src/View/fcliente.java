@@ -54,6 +54,7 @@ public class fcliente extends javax.swing.JFrame {
 
         JBACK_Client.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         JBACK_Client.setText("<<");
+        JBACK_Client.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         JBACK_Client.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBACK_ClientActionPerformed(evt);
@@ -69,44 +70,51 @@ public class fcliente extends javax.swing.JFrame {
 
         jLNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLNombre.setText("Nombre");
-        jPanel2.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 124, -1, -1));
+        jPanel2.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         jLid.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLid.setText("Id");
-        jPanel2.add(jLid, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 90, -1, -1));
+        jPanel2.add(jLid, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         jLApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLApellido.setText("Apellido");
-        jPanel2.add(jLApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 158, -1, -1));
+        jPanel2.add(jLApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
         JTClient_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_IDActionPerformed(evt);
             }
         });
-        jPanel2.add(JTClient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 90, 170, -1));
+        jPanel2.add(JTClient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 92, 160, 20));
 
         JTClient_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_NombreActionPerformed(evt);
             }
         });
-        jPanel2.add(JTClient_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 124, 170, -1));
+        jPanel2.add(JTClient_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 160, 20));
 
         JTClient_Apellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_ApellidoActionPerformed(evt);
             }
         });
-        jPanel2.add(JTClient_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 158, 170, -1));
+        jPanel2.add(JTClient_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 152, 160, 20));
 
         JBClient_Mostrar.setText("Mostrar");
-        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
+        JBClient_Mostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JBClient_Mostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBClient_MostrarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, 20));
 
-        JBUSCAR_CLient.setText("Buscar");
-        jPanel2.add(JBUSCAR_CLient, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
+        JBUSCAR_CLient.setText("...");
+        JBUSCAR_CLient.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(JBUSCAR_CLient, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 102, 310, 280));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 102, 330, 280));
 
         JTable_Cliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -136,7 +144,7 @@ public class fcliente extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false
@@ -152,7 +160,7 @@ public class fcliente extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(JTable_Cliente);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, 340));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 60, -1, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -172,6 +180,10 @@ public class fcliente extends javax.swing.JFrame {
     private void JBACK_ClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBACK_ClientActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBACK_ClientActionPerformed
+
+    private void JBClient_MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBClient_MostrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBClient_MostrarActionPerformed
 
     /**
      * @param args the command line arguments

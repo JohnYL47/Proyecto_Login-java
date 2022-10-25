@@ -29,7 +29,7 @@ public class fvendedor extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         a = new javax.swing.JLabel();
-        volver_Vendedor = new javax.swing.JButton();
+        JBACK_Vendedor = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLNombre = new javax.swing.JLabel();
         jLid = new javax.swing.JLabel();
@@ -37,7 +37,6 @@ public class fvendedor extends javax.swing.JFrame {
         JTVENDEDOR_ID = new javax.swing.JTextField();
         JTVENDEDOR_Nombre = new javax.swing.JTextField();
         JTVENDEDOR_Apellido = new javax.swing.JTextField();
-        JBVENDEDOR_Guardar = new javax.swing.JButton();
         JBVENDEDOR_Mostrar = new javax.swing.JButton();
         JBVENDEDOR_Buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -58,14 +57,15 @@ public class fvendedor extends javax.swing.JFrame {
         a.setText("Formulario de Vendedor");
         jPanel3.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        volver_Vendedor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        volver_Vendedor.setText("<<");
-        volver_Vendedor.addActionListener(new java.awt.event.ActionListener() {
+        JBACK_Vendedor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBACK_Vendedor.setText("<<");
+        JBACK_Vendedor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JBACK_Vendedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volver_VendedorActionPerformed(evt);
+                JBACK_VendedorActionPerformed(evt);
             }
         });
-        jPanel3.add(volver_Vendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 30));
+        jPanel3.add(JBACK_Vendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 60, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -2, 990, 70));
 
@@ -107,28 +107,45 @@ public class fvendedor extends javax.swing.JFrame {
         });
         jPanel2.add(JTVENDEDOR_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 144, 20));
 
-        JBVENDEDOR_Guardar.setBackground(new java.awt.Color(204, 204, 204));
-        JBVENDEDOR_Guardar.setText("Guardar");
-        jPanel2.add(JBVENDEDOR_Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
-
         JBVENDEDOR_Mostrar.setBackground(new java.awt.Color(204, 204, 204));
         JBVENDEDOR_Mostrar.setText("Mostrar");
-        jPanel2.add(JBVENDEDOR_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+        JBVENDEDOR_Mostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(JBVENDEDOR_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
 
         JBVENDEDOR_Buscar.setBackground(new java.awt.Color(204, 204, 204));
-        JBVENDEDOR_Buscar.setText("Buscar");
+        JBVENDEDOR_Buscar.setText("...");
+        JBVENDEDOR_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         JBVENDEDOR_Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBVENDEDOR_BuscarActionPerformed(evt);
             }
         });
-        jPanel2.add(JBVENDEDOR_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
+        jPanel2.add(JBVENDEDOR_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 320, 280));
 
         JTable_Vendedor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
                 "ID", "Nombre", "Apellido"
@@ -151,7 +168,7 @@ public class fvendedor extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(JTable_Vendedor);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, -1, 340));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, 340));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, -1));
 
@@ -174,9 +191,9 @@ public class fvendedor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JBVENDEDOR_BuscarActionPerformed
 
-    private void volver_VendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_VendedorActionPerformed
+    private void JBACK_VendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBACK_VendedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_volver_VendedorActionPerformed
+    }//GEN-LAST:event_JBACK_VendedorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -214,8 +231,8 @@ public class fvendedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton JBACK_Vendedor;
     public javax.swing.JButton JBVENDEDOR_Buscar;
-    public javax.swing.JButton JBVENDEDOR_Guardar;
     public javax.swing.JButton JBVENDEDOR_Mostrar;
     public javax.swing.JTextField JTVENDEDOR_Apellido;
     public javax.swing.JTextField JTVENDEDOR_ID;
@@ -229,6 +246,5 @@ public class fvendedor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JButton volver_Vendedor;
     // End of variables declaration//GEN-END:variables
 }

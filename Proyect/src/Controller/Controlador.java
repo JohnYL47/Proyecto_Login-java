@@ -51,7 +51,6 @@ public class Controlador implements ActionListener {
         this.productos.JBProducts_Guardar.addActionListener(this);
         this.productos.JBProducts_Mostrar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Buscar.addActionListener(this);
-        this.vendedor.JBVENDEDOR_Guardar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Mostrar.addActionListener(this);
 
     } //Buttons
@@ -92,11 +91,17 @@ public class Controlador implements ActionListener {
             cargartablaClient(this.clientes.JTable_Cliente, list_Person);
         }
 //Buscar
-        if (e.getSource()==this.clientes.JBACK_Client) {
-            clientes.dispose();
+        if (e.getSource() == this.clientes.JBUSCAR_CLient) {
+            //Al presionar el boton buscar nos enviará  a la otra interfaz
+            for (int i = 0; i < list_Person.size(); i++) {
+                if (Integer.parseInt(this.clientes.JTClient_ID.getText()) == list_Person.get(i).getId()) {
+                    this.clientes.JTClient_Nombre.setText(list_Person.get(i).getNombre());
+                    this.clientes.JTClient_Apellido.setText(list_Person.get(i).getApellido());
+                }
+            }
         }
-        if (e.getSource()==this.clientes.JBUSCAR_CLient) {
-            //
+        if (e.getSource() == this.clientes.JBACK_Client) {
+            clientes.dispose();
         }
 
         //VENDEDOR
@@ -116,11 +121,11 @@ public class Controlador implements ActionListener {
         this.vendedor.JTVENDEDOR_Nombre.setText("");
     } //Limpiar --Admin
 
-    private void cargartablaClient(JTable JTable_Cliente, ArrayList<ModelPerson> list) {
-        for (int i = 0; i < list.size(); i++) {
-            JTable_Cliente.setValueAt(list.get(i).getId(), i, 0);
-            JTable_Cliente.setValueAt(list.get(i).getNombre(), i, 1);
-            JTable_Cliente.setValueAt(list.get(i).getApellido(), i, 2);
+    private void cargartablaClient(JTable JTable_Cliente, ArrayList<ModelPerson> list_C) {
+        for (int i = 0; i < list_C.size(); i++) {
+            JTable_Cliente.setValueAt(list_C.get(i).getId(), i, 0);
+            JTable_Cliente.setValueAt(list_C.get(i).getNombre(), i, 1);
+            JTable_Cliente.setValueAt(list_C.get(i).getApellido(), i, 2);
 
         }
     }
