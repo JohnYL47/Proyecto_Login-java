@@ -93,7 +93,9 @@ public class Controlador implements ActionListener {
         }
         //VENDEDOR
 //Guardar
-
+     if (e.getSource() == productos.JBProducts_Guardar) {
+          JOptionPane.showMessageDialog(null, "Algo", "ERROR", JOptionPane.ERROR_MESSAGE);
+     }
 //Guardar
     }
 
