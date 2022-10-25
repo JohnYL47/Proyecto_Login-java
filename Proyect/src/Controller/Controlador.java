@@ -45,6 +45,8 @@ public class Controlador implements ActionListener {
         //Falta Admin
         this.vistalogin.JBGuardar_login.addActionListener(this);
         this.clientes.JBClient_Mostrar.addActionListener(this);
+        this.clientes.JBACK_Client.addActionListener(this);
+        this.clientes.JBUSCAR_CLient.addActionListener(this);
         this.productos.JBProducts_Buscar.addActionListener(this);
         this.productos.JBProducts_Guardar.addActionListener(this);
         this.productos.JBProducts_Mostrar.addActionListener(this);
@@ -88,12 +90,17 @@ public class Controlador implements ActionListener {
             limpiar();
             list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
             cargartablaClient(this.clientes.JTable_Cliente, list_Person);
-//Mostrar
-
         }
+//Buscar
+        if (e.getSource()==this.clientes.JBACK_Client) {
+            clientes.dispose();
+        }
+        if (e.getSource()==this.clientes.JBUSCAR_CLient) {
+            //
+        }
+
         //VENDEDOR
 //Guardar
-
 //Guardar
     }
 

@@ -28,7 +28,7 @@ public class fcliente extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         a = new javax.swing.JLabel();
-        volver_Cliente = new javax.swing.JButton();
+        JBACK_Client = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLNombre = new javax.swing.JLabel();
         jLid = new javax.swing.JLabel();
@@ -37,6 +37,7 @@ public class fcliente extends javax.swing.JFrame {
         JTClient_Nombre = new javax.swing.JTextField();
         JTClient_Apellido = new javax.swing.JTextField();
         JBClient_Mostrar = new javax.swing.JButton();
+        JBUSCAR_CLient = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_Cliente = new javax.swing.JTable();
 
@@ -51,14 +52,14 @@ public class fcliente extends javax.swing.JFrame {
         a.setText("Formulario de Cliente");
         jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 40));
 
-        volver_Cliente.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        volver_Cliente.setText("<<");
-        volver_Cliente.addActionListener(new java.awt.event.ActionListener() {
+        JBACK_Client.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        JBACK_Client.setText("<<");
+        JBACK_Client.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volver_ClienteActionPerformed(evt);
+                JBACK_ClientActionPerformed(evt);
             }
         });
-        jPanel1.add(volver_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, -1));
+        jPanel1.add(JBACK_Client, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 60, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 986, -1));
 
@@ -83,24 +84,27 @@ public class fcliente extends javax.swing.JFrame {
                 JTClient_IDActionPerformed(evt);
             }
         });
-        jPanel2.add(JTClient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 90, 144, -1));
+        jPanel2.add(JTClient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 90, 170, -1));
 
         JTClient_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_NombreActionPerformed(evt);
             }
         });
-        jPanel2.add(JTClient_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 124, 144, -1));
+        jPanel2.add(JTClient_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 124, 170, -1));
 
         JTClient_Apellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTClient_ApellidoActionPerformed(evt);
             }
         });
-        jPanel2.add(JTClient_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 158, 144, -1));
+        jPanel2.add(JTClient_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 158, 170, -1));
 
         JBClient_Mostrar.setText("Mostrar");
-        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
+        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
+
+        JBUSCAR_CLient.setText("Buscar");
+        jPanel2.add(JBUSCAR_CLient, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 102, 310, 280));
 
@@ -165,9 +169,9 @@ public class fcliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTClient_ApellidoActionPerformed
 
-    private void volver_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_ClienteActionPerformed
+    private void JBACK_ClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBACK_ClientActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_volver_ClienteActionPerformed
+    }//GEN-LAST:event_JBACK_ClientActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,7 +209,9 @@ public class fcliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton JBACK_Client;
     public javax.swing.JButton JBClient_Mostrar;
+    public javax.swing.JButton JBUSCAR_CLient;
     public javax.swing.JTextField JTClient_Apellido;
     public javax.swing.JTextField JTClient_ID;
     public javax.swing.JTextField JTClient_Nombre;
@@ -217,6 +223,5 @@ public class fcliente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JButton volver_Cliente;
     // End of variables declaration//GEN-END:variables
 }
