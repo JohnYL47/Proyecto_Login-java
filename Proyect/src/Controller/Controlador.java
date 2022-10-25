@@ -16,7 +16,6 @@ import java.util.*;
 public class Controlador implements ActionListener {
 
     ArrayList<ModelPerson> list_Person = new ArrayList<ModelPerson>();
-   
 
     fLogin vistalogin = new fLogin();
     fcliente clientes = new fcliente();
@@ -45,7 +44,6 @@ public class Controlador implements ActionListener {
     public Controlador(fLogin login) {
         //Falta Admin
         this.vistalogin.JBGuardar_login.addActionListener(this);
-        this.clientes.JBClient_Guardar.addActionListener(this);
         this.clientes.JBClient_Mostrar.addActionListener(this);
         this.productos.JBProducts_Buscar.addActionListener(this);
         this.productos.JBProducts_Guardar.addActionListener(this);
@@ -53,7 +51,7 @@ public class Controlador implements ActionListener {
         this.vendedor.JBVENDEDOR_Buscar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Guardar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Mostrar.addActionListener(this);
-        
+
     } //Buttons
 
     public void iniciar() {
@@ -79,31 +77,24 @@ public class Controlador implements ActionListener {
             } else {
                 JOptionPane.showMessageDialog(null, "Contraseña o Usuario no valido", "ERROR", JOptionPane.ERROR_MESSAGE);
             }
-
-        
-        //CLIENTE
-//Guardar
-  
-
-            /*list_Person.add(new Clientes(Id, Nombre, Apellido, usuario, password));
-            cargartablaClient(this.JTable_Cliente, list_Person);*/
         }
-        if (e.getSource()==this.clientes.JBClient_Mostrar) {
+        //CLIENTE
+//Guardar y Mostrar
+
+        if (e.getSource() == this.clientes.JBClient_Mostrar) {
             Id = Integer.parseInt(this.clientes.JTClient_ID.getText());
             Nombre = this.clientes.JTClient_Nombre.getText();
             Apellido = this.clientes.JTClient_Apellido.getText();
             limpiar();
             list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
-            cargartablaClient(this.JTable_Cliente, list_Person);
+            cargartablaClient(this.clientes.JTable_Cliente, list_Person);
 //Mostrar
-      
+
         }
         //VENDEDOR
 //Guardar
-   
-//Guardar
-      
 
+//Guardar
     }
 
     private void limpiar() {
@@ -127,7 +118,3 @@ public class Controlador implements ActionListener {
         }
     }
 }
-
-
-    
-

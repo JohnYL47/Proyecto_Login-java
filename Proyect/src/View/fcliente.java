@@ -36,7 +36,6 @@ public class fcliente extends javax.swing.JFrame {
         JTClient_ID = new javax.swing.JTextField();
         JTClient_Nombre = new javax.swing.JTextField();
         JTClient_Apellido = new javax.swing.JTextField();
-        JBClient_Guardar = new javax.swing.JButton();
         JBClient_Mostrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_Cliente = new javax.swing.JTable();
@@ -100,11 +99,8 @@ public class fcliente extends javax.swing.JFrame {
         });
         jPanel2.add(JTClient_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 158, 144, -1));
 
-        JBClient_Guardar.setText("Guardar");
-        jPanel2.add(JBClient_Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
-
         JBClient_Mostrar.setText("Mostrar");
-        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
+        jPanel2.add(JBClient_Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 102, 310, 280));
 
@@ -209,7 +205,6 @@ public class fcliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton JBClient_Guardar;
     public javax.swing.JButton JBClient_Mostrar;
     public javax.swing.JTextField JTClient_Apellido;
     public javax.swing.JTextField JTClient_ID;
