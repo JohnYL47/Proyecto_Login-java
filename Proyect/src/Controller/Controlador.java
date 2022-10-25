@@ -13,14 +13,10 @@ import Model.*;
 import View.*;
 import java.util.*;
 
-
 public class Controlador implements ActionListener {
 
-    ArrayList<Login> list_Login = new ArrayList<>();
-    ArrayList<ModelPerson> list_Person = new ArrayList<>();
-    ArrayList<Productos> lista_Prod = new ArrayList<>();
-    ArrayList<Vendedor> lista_Vended = new ArrayList<>();
-    ArrayList<Clientes> lista_Client = new ArrayList<>();
+    ArrayList<ModelPerson> list_Person = new ArrayList<ModelPerson>();
+   
 
     fLogin vistalogin = new fLogin();
     fcliente clientes = new fcliente();
@@ -57,6 +53,7 @@ public class Controlador implements ActionListener {
         this.vendedor.JBVENDEDOR_Buscar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Guardar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Mostrar.addActionListener(this);
+        
     } //Buttons
 
     public void iniciar() {
@@ -70,7 +67,7 @@ public class Controlador implements ActionListener {
         if (e.getSource() == this.vistalogin.JBGuardar_login) {
             usuario = this.vistalogin.JTNombre_login.getText();
             password = this.vistalogin.JPassword_login.getText();
-
+            limpiar();
             if (usuario.equals("admin") && password.equals("123")) {
                 productos.setVisible(true);
             } else if (usuario.equals("cliente") && password.equals("456")) {
@@ -82,42 +79,30 @@ public class Controlador implements ActionListener {
             } else {
                 JOptionPane.showMessageDialog(null, "Contraseña o Usuario no valido", "ERROR", JOptionPane.ERROR_MESSAGE);
             }
-            limpiar();
-        }
+
+        
         //CLIENTE
 //Guardar
-        if (e.getSource() == this.clientes.JBClient_Guardar) {
+  
+
+            /*list_Person.add(new Clientes(Id, Nombre, Apellido, usuario, password));
+            cargartablaClient(this.JTable_Cliente, list_Person);*/
+        }
+        if (e.getSource()==this.clientes.JBClient_Mostrar) {
             Id = Integer.parseInt(this.clientes.JTClient_ID.getText());
             Nombre = this.clientes.JTClient_Nombre.getText();
             Apellido = this.clientes.JTClient_Apellido.getText();
-
-            lista_Vended.add(new Vendedor(Id, usuario, Apellido));
-            cargartablaClient(JTable_Cliente, lista_Client);
-        }
+            limpiar();
+            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
+            cargartablaClient(this.JTable_Cliente, list_Person);
 //Mostrar
-        if (e.getSource() == this.clientes.JBClient_Mostrar) {
-            //
+      
         }
         //VENDEDOR
 //Guardar
-        if (e.getSource() == this.vendedor.JBVENDEDOR_Guardar) {
-            Id = Integer.parseInt(this.vendedor.JTVENDEDOR_ID.getText());
-            Nombre = this.vendedor.JTVENDEDOR_Nombre.getText();
-            Apellido = this.vendedor.JTVENDEDOR_Apellido.getText();
-
-            lista_Vended.add(new Vendedor(Id, usuario, Apellido));
-            cargartablaVent(JTable_Vendedor, lista_Vended);
-        }
-        //PRODUCTO
+   
 //Guardar
-        if (e.getSource() == this.productos.JBProducts_Guardar) {
-            Id_Product = Integer.parseInt(this.productos.JTProducts_ID.getText());
-            Nombre_Product = this.productos.JTProducts_Nombre.getText();
-            Precio_Product = this.productos.JTProducts_precio.getText();
-
-            lista_Vended.add(new Vendedor(Id, usuario, Apellido));
-            cargartablaProduct(JTable_Products, lista_Prod);
-        }
+      
 
     }
 
@@ -133,32 +118,16 @@ public class Controlador implements ActionListener {
         this.vendedor.JTVENDEDOR_Nombre.setText("");
     } //Limpiar --Admin
 
-    private void cargartablaClient(JTable JTable_Cliente, ArrayList<Clientes> ListClient) {
-        for (int i = 0; i < ListClient.size(); i++) {
-            JTable_Cliente.setValueAt(ListClient.get(i).getId(), i, 0);
-            JTable_Cliente.setValueAt(ListClient.get(i).getNombre(), i, 1);
-            JTable_Cliente.setValueAt(ListClient.get(i).getApellido(), i, 2);
+    private void cargartablaClient(JTable JTable_Cliente, ArrayList<ModelPerson> list) {
+        for (int i = 0; i < list.size(); i++) {
+            JTable_Cliente.setValueAt(list.get(i).getId(), i, 0);
+            JTable_Cliente.setValueAt(list.get(i).getNombre(), i, 1);
+            JTable_Cliente.setValueAt(list.get(i).getApellido(), i, 2);
 
         }
     }
-
-    private void cargartablaVent(JTable JTable_Vendedor, ArrayList<Vendedor> ListVent) {
-        for (int i = 0; i < ListVent.size(); i++) {
-            JTable_Vendedor.setValueAt(ListVent.get(i).getId(), i, 0);
-            JTable_Vendedor.setValueAt(ListVent.get(i).getNombre(), i, 1);
-            JTable_Vendedor.setValueAt(ListVent.get(i).getApellido(), i, 2);
-
-        }
-    } //Carga la tabla creo...
-
-    private void cargartablaProduct(JTable JTable_Products, ArrayList<Productos> ListProd) {
-        for (int i = 0; i < ListProd.size(); i++) {
-
-            JTable_Products.setValueAt(ListProd.get(i).getIdTb(), i, 0);
-            JTable_Products.setValueAt(ListProd.get(i).getNombreTb(), i, 1);
-            JTable_Products.setValueAt(ListProd.get(i).getPrecioTb(), i, 2);
-            JTable_Products.setValueAt(ListProd.get(i).getCategoriaTb(), i, 3);
-
-        }
-    }// 'Tb' = PRODUCTOS
 }
+
+
+    
+

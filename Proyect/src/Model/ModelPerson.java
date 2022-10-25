@@ -13,11 +13,15 @@ public class ModelPerson {
     protected int Id;
     protected String Nombre;
     protected String Apellido;
+    protected String usuario;
+    protected String password;
 
-    public ModelPerson(int Id, String Nombre, String Apellido) {
+    public ModelPerson(int Id, String Nombre, String Apellido, String usuario, String password) {
         this.Id = Id;
         this.Nombre = Nombre;
         this.Apellido = Apellido;
+        this.usuario = usuario;
+        this.password = password;
     }
 
     public int getId() {
@@ -43,5 +47,22 @@ public class ModelPerson {
     public void setApellido(String Apellido) {
         this.Apellido = Apellido;
     }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     
 }

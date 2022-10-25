@@ -10,7 +10,7 @@ import Model.*;
  */
 public class Clientes extends ModelPerson{
     
-    public Clientes(int Id, String Nombre, String Apellido) {
-        super(Id, Nombre, Apellido);
+    public Clientes(int Id, String Nombre, String Apellido, String usuario, String password) {
+        super(Id, Nombre, Apellido, usuario, password);
     }    
 }
