@@ -23,13 +23,17 @@ public class Controlador implements ActionListener {
     fvendedor vendedor = new fvendedor();
 
     //--------------List--------------------------//
-    //SESION
+    //LOGIN
     private String usuario;
     private String password;
-    //TABLA DE PERSON,CLIENTE,VENDEDOR
+    //TABLA DE CLIENTE
     private int Id;
     private String Nombre;
     private String Apellido;
+    //TABLA VENDEDOR
+    private int Idv;
+    private String Nombrev;
+    private String Apellidov;
     //TABLA PRODUCTOS
     private int Id_Product;
     private String Nombre_Product;
@@ -87,7 +91,7 @@ public class Controlador implements ActionListener {
             Nombre = this.clientes.JTClient_Nombre.getText();
             Apellido = this.clientes.JTClient_Apellido.getText();
             limpiar();
-            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password, Id, Nombre, Apellido, Id_Product, Nombre_Product, Precio_Product, Categoria_Product));
+            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password, Idv, Nombrev, Apellidov, Id_Product, Nombre_Product, Precio_Product, Categoria_Product));
             cargartablaClient(this.clientes.JTable_Cliente, list_Person);
         }
         /*if (e.getSource() == this.clientes.JBClient_Mostrar) {
@@ -113,8 +117,27 @@ public class Controlador implements ActionListener {
         }
 
         //VENDEDOR
-//Guardar
-//Guardar
+//Guardar y Mostrar
+        if (e.getSource() == this.vendedor.JBVENDEDOR_Mostrar) {
+            Idv = Integer.parseInt(this.vendedor.JTVENDEDOR_ID.getText());
+            Nombrev = this.vendedor.JTVENDEDOR_Nombre.getText();
+            Apellidov = this.vendedor.JTVENDEDOR_Apellido.getText();
+            limpiar();
+            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password, Idv, Nombrev, Apellidov, Id_Product, Nombre_Product, Precio_Product, Categoria_Product));
+            cargartablaVent(this.vendedor.JTable_Vendedor, list_Person);
+        }
+//Buscar
+        if (e.getSource() == this.vendedor.JBVENDEDOR_Buscar) {
+            for (int i = 0; i < list_Person.size(); i++) {
+                if (Integer.parseInt(this.vendedor.JTVENDEDOR_ID.getText()) == list_Person.get(i).getIdv()) {
+                    this.vendedor.JTVENDEDOR_Nombre.setText(list_Person.get(i).getNombrev());
+                    this.vendedor.JTVENDEDOR_Apellido.setText(list_Person.get(i).getApellidov());
+                }
+            }
+        }
+        if (e.getSource() == this.vendedor.JBACK_Vendedor) {
+            vendedor.dispose();
+        }
     }
 
     private void limpiar() {
@@ -135,6 +158,14 @@ public class Controlador implements ActionListener {
             JTable_Cliente.setValueAt(list_C.get(i).getNombre(), i, 1);
             JTable_Cliente.setValueAt(list_C.get(i).getApellido(), i, 2);
 
+        }
+    }
+
+    private void cargartablaVent(JTable JTable_Vendedor, ArrayList<ModelPerson> list_V) {
+        for (int i = 0; i < list_V.size(); i++) {
+            JTable_Vendedor.setValueAt(list_V.get(i).getIdv(), i, 0);
+            JTable_Vendedor.setValueAt(list_V.get(i).getNombrev(), i, 1);
+            JTable_Vendedor.setValueAt(list_V.get(i).getApellidov(), i, 2);
         }
     }
 }
