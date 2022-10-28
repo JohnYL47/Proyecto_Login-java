@@ -87,9 +87,17 @@ public class Controlador implements ActionListener {
             Nombre = this.clientes.JTClient_Nombre.getText();
             Apellido = this.clientes.JTClient_Apellido.getText();
             limpiar();
-            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
+            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password, Id, Nombre, Apellido, Id_Product, Nombre_Product, Precio_Product, Categoria_Product));
             cargartablaClient(this.clientes.JTable_Cliente, list_Person);
         }
+        /*if (e.getSource() == this.clientes.JBClient_Mostrar) {
+            Id = Integer.parseInt(this.clientes.JTClient_ID.getText());
+            Nombre = this.clientes.JTClient_Nombre.getText();
+            Apellido = this.clientes.JTClient_Apellido.getText();
+            limpiar();
+            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
+            cargartablaClient(this.clientes.JTable_Cliente, list_Person);
+        }*/
 //Buscar
         if (e.getSource() == this.clientes.JBUSCAR_CLient) {
             //Al presionar el boton buscar nos enviará  a la otra interfaz
