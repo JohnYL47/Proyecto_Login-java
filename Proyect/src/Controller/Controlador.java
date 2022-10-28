@@ -18,9 +18,11 @@ public class Controlador implements ActionListener {
     ArrayList<ModelPerson> list_Person = new ArrayList<ModelPerson>();
 
     fLogin vistalogin = new fLogin();
-    fcliente clientes = new fcliente();
+    fclientes clientes = new fclientes();
     fproductos productos = new fproductos();
     fvendedor vendedor = new fvendedor();
+    fadmin admin=new fadmin();
+    
 
     //--------------List--------------------------//
     //SESION
@@ -51,11 +53,13 @@ public class Controlador implements ActionListener {
         this.vendedor.JBVENDEDOR_Buscar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Guardar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Mostrar.addActionListener(this);
+        
 
     } //Buttons
 
     public void iniciar() {
-        this.vistalogin.setVisible(true);
+        this.vistalogin.setVisible(false);
+        this.admin.setVisible(true);
     } //inicio
 
     @Override
@@ -87,7 +91,7 @@ public class Controlador implements ActionListener {
             Apellido = this.clientes.JTClient_Apellido.getText();
             limpiar();
             list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
-            cargartablaClient(this.clientes.JTable_Cliente, list_Person);
+            cargartablaClient(this.clientes.JTable_Client, list_Person);
 //Mostrar
 
         }
@@ -95,9 +99,14 @@ public class Controlador implements ActionListener {
 //Guardar
      if (e.getSource() == productos.JBProducts_Guardar) {
           JOptionPane.showMessageDialog(null, "Algo", "ERROR", JOptionPane.ERROR_MESSAGE);
-     }
-//Guardar
+     } 
+//cerrar ventanas
+
+
     }
+    
+   
+    
 
     private void limpiar() {
         //Falta admin
