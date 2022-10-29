@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package View;
 
@@ -8,7 +8,7 @@ package View;
  *
  * @author SENA
  */
-public class fvendedor extends javax.swing.JFrame {
+public class fvendedor extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form fvendedor
@@ -26,10 +26,13 @@ public class fvendedor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         a = new javax.swing.JLabel();
         JBACK_Vendedor = new javax.swing.JButton();
+=======
+>>>>>>> main
         jPanel2 = new javax.swing.JPanel();
         jLNombre = new javax.swing.JLabel();
         jLid = new javax.swing.JLabel();
@@ -39,9 +42,23 @@ public class fvendedor extends javax.swing.JFrame {
         JTVENDEDOR_Apellido = new javax.swing.JTextField();
         JBVENDEDOR_Mostrar = new javax.swing.JButton();
         JBVENDEDOR_Buscar = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        a = new javax.swing.JLabel();
+        volver_Vendedor = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLNombre1 = new javax.swing.JLabel();
+        jLid1 = new javax.swing.JLabel();
+        jLApellido1 = new javax.swing.JLabel();
+        JTVENDEDOR_ID1 = new javax.swing.JTextField();
+        JTVENDEDOR_Nombre1 = new javax.swing.JTextField();
+        JTVENDEDOR_Apellido1 = new javax.swing.JTextField();
+        JBVENDEDOR_Guardar1 = new javax.swing.JButton();
+        JBVENDEDOR_Mostrar1 = new javax.swing.JButton();
+        JBVENDEDOR_Buscar1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_Vendedor = new javax.swing.JTable();
 
+<<<<<<< HEAD
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -69,6 +86,8 @@ public class fvendedor extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -2, 990, 70));
 
+=======
+>>>>>>> main
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "vendedores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,7 +141,83 @@ public class fvendedor extends javax.swing.JFrame {
         });
         jPanel2.add(JBVENDEDOR_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 320, 280));
+        setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
+        jPanel3.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        a.setBackground(new java.awt.Color(0, 102, 255));
+        a.setFont(new java.awt.Font("Serif", 0, 24)); // NOI18N
+        a.setForeground(new java.awt.Color(255, 255, 255));
+        a.setText("Formulario de Vendedor");
+        jPanel3.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+
+        volver_Vendedor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        volver_Vendedor.setText("<<");
+        volver_Vendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volver_VendedorActionPerformed(evt);
+            }
+        });
+        jPanel3.add(volver_Vendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 30));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "vendedores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLNombre1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        jLNombre1.setText("Nombre");
+        jPanel4.add(jLNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        jLid1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        jLid1.setText("Id");
+        jPanel4.add(jLid1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, 20));
+
+        jLApellido1.setFont(new java.awt.Font("Candara", 1, 14)); // NOI18N
+        jLApellido1.setText("Apellido");
+        jPanel4.add(jLApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+
+        JTVENDEDOR_ID1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTVENDEDOR_ID1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(JTVENDEDOR_ID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 144, -1));
+
+        JTVENDEDOR_Nombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTVENDEDOR_Nombre1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(JTVENDEDOR_Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 144, -1));
+
+        JTVENDEDOR_Apellido1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTVENDEDOR_Apellido1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(JTVENDEDOR_Apellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 144, 20));
+
+        JBVENDEDOR_Guardar1.setBackground(new java.awt.Color(204, 204, 204));
+        JBVENDEDOR_Guardar1.setText("Guardar");
+        jPanel4.add(JBVENDEDOR_Guardar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        JBVENDEDOR_Mostrar1.setBackground(new java.awt.Color(204, 204, 204));
+        JBVENDEDOR_Mostrar1.setText("Mostrar");
+        jPanel4.add(JBVENDEDOR_Mostrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+
+        JBVENDEDOR_Buscar1.setBackground(new java.awt.Color(204, 204, 204));
+        JBVENDEDOR_Buscar1.setText("Buscar");
+        JBVENDEDOR_Buscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBVENDEDOR_Buscar1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(JBVENDEDOR_Buscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
 
         JTable_Vendedor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -168,12 +263,43 @@ public class fvendedor extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(JTable_Vendedor);
 
+<<<<<<< HEAD
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, 340));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, -1));
+=======
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 990, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43))
+        );
+>>>>>>> main
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void volver_VendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_VendedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_volver_VendedorActionPerformed
 
     private void JTVENDEDOR_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVENDEDOR_IDActionPerformed
         // TODO add your handling code here:
@@ -191,60 +317,57 @@ public class fvendedor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JBVENDEDOR_BuscarActionPerformed
 
+<<<<<<< HEAD
     private void JBACK_VendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBACK_VendedorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JBACK_VendedorActionPerformed
+=======
+    private void JTVENDEDOR_ID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVENDEDOR_ID1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTVENDEDOR_ID1ActionPerformed
+>>>>>>> main
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(fvendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(fvendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(fvendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(fvendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void JTVENDEDOR_Nombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVENDEDOR_Nombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTVENDEDOR_Nombre1ActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new fvendedor().setVisible(true);
-            }
-        });
-    }
+    private void JTVENDEDOR_Apellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTVENDEDOR_Apellido1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTVENDEDOR_Apellido1ActionPerformed
+
+    private void JBVENDEDOR_Buscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBVENDEDOR_Buscar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBVENDEDOR_Buscar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton JBACK_Vendedor;
     public javax.swing.JButton JBVENDEDOR_Buscar;
+<<<<<<< HEAD
+=======
+    public javax.swing.JButton JBVENDEDOR_Buscar1;
+    public javax.swing.JButton JBVENDEDOR_Guardar;
+    public javax.swing.JButton JBVENDEDOR_Guardar1;
+>>>>>>> main
     public javax.swing.JButton JBVENDEDOR_Mostrar;
+    public javax.swing.JButton JBVENDEDOR_Mostrar1;
     public javax.swing.JTextField JTVENDEDOR_Apellido;
+    public javax.swing.JTextField JTVENDEDOR_Apellido1;
     public javax.swing.JTextField JTVENDEDOR_ID;
+    public javax.swing.JTextField JTVENDEDOR_ID1;
     public javax.swing.JTextField JTVENDEDOR_Nombre;
+    public javax.swing.JTextField JTVENDEDOR_Nombre1;
     public javax.swing.JTable JTable_Vendedor;
     private javax.swing.JLabel a;
     private javax.swing.JLabel jLApellido;
+    private javax.swing.JLabel jLApellido1;
     private javax.swing.JLabel jLNombre;
+    private javax.swing.JLabel jLNombre1;
     private javax.swing.JLabel jLid;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLid1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

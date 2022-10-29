@@ -19,9 +19,11 @@ public class Controlador implements ActionListener {
     ArrayList<Vendedor_Controller> list_Vendedor = new ArrayList<Vendedor_Controller>();
     
     fLogin vistalogin = new fLogin();
-    fcliente clientes = new fcliente();
+    fclientes clientes = new fclientes();
     fproductos productos = new fproductos();
     fvendedor vendedor = new fvendedor();
+    fadmin admin=new fadmin();
+    
 
     //--------------List--------------------------//
     //LOGIN
@@ -57,12 +59,17 @@ public class Controlador implements ActionListener {
         this.productos.JBProducts_Mostrar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Buscar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Mostrar.addActionListener(this);
+<<<<<<< HEAD
         this.vendedor.JBACK_Vendedor.addActionListener(this);
+=======
+        
+>>>>>>> main
 
     } //Buttons
 
     public void iniciar() {
-        this.vistalogin.setVisible(true);
+        this.vistalogin.setVisible(false);
+        this.admin.setVisible(true);
     } //inicio
 
     @Override
@@ -94,6 +101,7 @@ public class Controlador implements ActionListener {
             Apellido = this.clientes.JTClient_Apellido.getText();
             limpiar();
             list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
+<<<<<<< HEAD
             cargartablaClient(this.clientes.JTable_Cliente, list_Person);
         }
         /*if (e.getSource() == this.clientes.JBClient_Mostrar) {
@@ -140,7 +148,24 @@ public class Controlador implements ActionListener {
         if (e.getSource() == this.vendedor.JBACK_Vendedor) {
             vendedor.dispose();
         }
+=======
+            cargartablaClient(this.clientes.JTable_Client, list_Person);
+//Mostrar
+
+        }
+        //VENDEDOR
+//Guardar
+     if (e.getSource() == productos.JBProducts_Guardar) {
+          JOptionPane.showMessageDialog(null, "Algo", "ERROR", JOptionPane.ERROR_MESSAGE);
+     } 
+//cerrar ventanas
+
+
+>>>>>>> main
     }
+    
+   
+    
 
     private void limpiar() {
         //Falta admin
