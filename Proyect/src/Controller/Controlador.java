@@ -196,3 +196,5 @@ public class Controlador implements ActionListener {
         }
     }
 }
+//suhdfbdhfdhfdfvdfhvdfhdvdhvfdhvfdh
+//sbhfvdhfvdgfv
