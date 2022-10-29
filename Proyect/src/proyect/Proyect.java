@@ -16,6 +16,8 @@ public class Proyect {
     public static void main(String[] args) {
        fLogin login = new fLogin();
        Controlador MARVEL = new Controlador(login);
+       
        MARVEL.iniciar();
+       
     }
 }
