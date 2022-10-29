@@ -16,7 +16,8 @@ import java.util.*;
 public class Controlador implements ActionListener {
 
     ArrayList<ModelPerson> list_Person = new ArrayList<ModelPerson>();
-
+    ArrayList<Vendedor_Controller> list_Vendedor = new ArrayList<Vendedor_Controller>();
+    
     fLogin vistalogin = new fLogin();
     fcliente clientes = new fcliente();
     fproductos productos = new fproductos();
@@ -56,6 +57,7 @@ public class Controlador implements ActionListener {
         this.productos.JBProducts_Mostrar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Buscar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Mostrar.addActionListener(this);
+        this.vendedor.JBACK_Vendedor.addActionListener(this);
 
     } //Buttons
 
@@ -91,7 +93,7 @@ public class Controlador implements ActionListener {
             Nombre = this.clientes.JTClient_Nombre.getText();
             Apellido = this.clientes.JTClient_Apellido.getText();
             limpiar();
-            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password, Idv, Nombrev, Apellidov, Id_Product, Nombre_Product, Precio_Product, Categoria_Product));
+            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password));
             cargartablaClient(this.clientes.JTable_Cliente, list_Person);
         }
         /*if (e.getSource() == this.clientes.JBClient_Mostrar) {
@@ -123,15 +125,15 @@ public class Controlador implements ActionListener {
             Nombrev = this.vendedor.JTVENDEDOR_Nombre.getText();
             Apellidov = this.vendedor.JTVENDEDOR_Apellido.getText();
             limpiar();
-            list_Person.add(new ModelPerson(Id, Nombre, Apellido, usuario, password, Idv, Nombrev, Apellidov, Id_Product, Nombre_Product, Precio_Product, Categoria_Product));
-            cargartablaVent(this.vendedor.JTable_Vendedor, list_Person);
+            list_Vendedor.add(new Vendedor_Controller(Idv, Nombrev, Apellidov));
+            cargartablaVent(this.vendedor.JTable_Vendedor, list_Vendedor);
         }
 //Buscar
         if (e.getSource() == this.vendedor.JBVENDEDOR_Buscar) {
-            for (int i = 0; i < list_Person.size(); i++) {
-                if (Integer.parseInt(this.vendedor.JTVENDEDOR_ID.getText()) == list_Person.get(i).getIdv()) {
-                    this.vendedor.JTVENDEDOR_Nombre.setText(list_Person.get(i).getNombrev());
-                    this.vendedor.JTVENDEDOR_Apellido.setText(list_Person.get(i).getApellidov());
+            for (int i = 0; i < list_Vendedor.size(); i++) {
+                if (Integer.parseInt(this.vendedor.JTVENDEDOR_ID.getText()) == list_Vendedor.get(i).getIdv()) {
+                    this.vendedor.JTVENDEDOR_Nombre.setText(list_Vendedor.get(i).getNombrev());
+                    this.vendedor.JTVENDEDOR_Apellido.setText(list_Vendedor.get(i).getApellidov());
                 }
             }
         }
@@ -161,7 +163,7 @@ public class Controlador implements ActionListener {
         }
     }
 
-    private void cargartablaVent(JTable JTable_Vendedor, ArrayList<ModelPerson> list_V) {
+    private void cargartablaVent(JTable JTable_Vendedor, ArrayList<Vendedor_Controller> list_V) {
         for (int i = 0; i < list_V.size(); i++) {
             JTable_Vendedor.setValueAt(list_V.get(i).getIdv(), i, 0);
             JTable_Vendedor.setValueAt(list_V.get(i).getNombrev(), i, 1);
