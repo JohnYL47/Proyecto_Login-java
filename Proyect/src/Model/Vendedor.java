@@ -8,9 +8,39 @@ import Model.*;
  *
  * @author SENA
  */
-public class Vendedor extends ModelPerson{
-    
-    public Vendedor(int Id, String Nombre, String Apellido, String usuario, String password){
-        super(Id, Nombre, Apellido, usuario, password);
+public class Vendedor{
+    protected int IdV;
+    protected String NombreV;
+    protected String ApellidoV;
+
+    public Vendedor(int IdV, String NombreV, String ApellidoV) {
+        this.IdV = IdV;
+        this.NombreV = NombreV;
+        this.ApellidoV = ApellidoV;
     }
+
+    public int getIdV() {
+        return IdV;
+    }
+
+    public void setIdV(int IdV) {
+        this.IdV = IdV;
+    }
+
+    public String getNombreV() {
+        return NombreV;
+    }
+
+    public void setNombreV(String NombreV) {
+        this.NombreV = NombreV;
+    }
+
+    public String getApellidoV() {
+        return ApellidoV;
+    }
+
+    public void setApellidoV(String ApellidoV) {
+        this.ApellidoV = ApellidoV;
+    }
+    
 }
