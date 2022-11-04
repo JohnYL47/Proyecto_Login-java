@@ -16,7 +16,11 @@ public class Proyect {
     public static void main(String[] args) {
        fLogin login = new fLogin();
        Controlador MARVEL = new Controlador(login);
+<<<<<<< HEAD
+      
+=======
        
+>>>>>>> 5ef63bed1194369c0ce6dd1a4ae925d71ddf8e25
        MARVEL.iniciar();
        
     }

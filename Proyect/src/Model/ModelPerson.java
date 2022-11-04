@@ -10,9 +10,11 @@ package Model;
  * @author AdminSena
  */
 public class ModelPerson {
+    //Client
     protected int Id;
     protected String Nombre;
     protected String Apellido;
+    //Login
     protected String usuario;
     protected String password;
 
@@ -63,6 +65,5 @@ public class ModelPerson {
     public void setPassword(String password) {
         this.password = password;
     }
-
     
 }
