@@ -8,16 +8,15 @@ package View;
  *
  * @author SENA
  */
-<<<<<<< HEAD:Proyect/src/View/fproductos.java
-public class fproductos extends javax.swing.JInternalFrame {
-=======
-public class JFproductos extends javax.swing.JFrame {
->>>>>>> solito:Proyect/src/View/JFproductos.java
+
+public class IFproductos extends javax.swing.JInternalFrame {
+
+
 
     /**
      * Creates new form fproductos
      */
-    public JFproductos() {
+    public IFproductos() {
         initComponents();
     }
 
@@ -32,12 +31,10 @@ public class JFproductos extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         a = new javax.swing.JLabel();
-        volver_Producto = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_Products = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         a1 = new javax.swing.JLabel();
-        volver_Producto1 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLNombre3 = new javax.swing.JLabel();
         jLid3 = new javax.swing.JLabel();
@@ -60,15 +57,6 @@ public class JFproductos extends javax.swing.JFrame {
         a.setForeground(new java.awt.Color(255, 255, 255));
         a.setText("Formulario de Producto");
         jPanel1.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
-
-        volver_Producto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        volver_Producto.setText("<<");
-        volver_Producto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volver_ProductoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(volver_Producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 17, 50, 30));
 
         JTable_Products.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -108,15 +96,6 @@ public class JFproductos extends javax.swing.JFrame {
         a1.setForeground(new java.awt.Color(255, 255, 255));
         a1.setText("Formulario de Producto");
         jPanel2.add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
-
-        volver_Producto1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        volver_Producto1.setText("<<");
-        volver_Producto1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volver_Producto1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(volver_Producto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 17, 50, 30));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "productos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 51, 255))); // NOI18N
 
@@ -247,13 +226,13 @@ public class JFproductos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(45, 45, 45)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,19 +242,15 @@ public class JFproductos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void volver_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_ProductoActionPerformed
+    private void volver_ProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                
         // TODO add your handling code here:
-    }//GEN-LAST:event_volver_ProductoActionPerformed
-
-    private void volver_Producto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_Producto1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_volver_Producto1ActionPerformed
+    }                                               
 
     private void JTProducts_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTProducts_IDActionPerformed
         // TODO add your handling code here:
@@ -293,11 +268,7 @@ public class JFproductos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JBProducts_BuscarActionPerformed
 
-<<<<<<< HEAD:Proyect/src/View/fproductos.java
-=======
-    private void volver_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver_ProductoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_volver_ProductoActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -316,25 +287,27 @@ public class JFproductos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IFproductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFproductos().setVisible(true);
+                new IFproductos().setVisible(true);
             }
         });
     }
->>>>>>> solito:Proyect/src/View/JFproductos.java
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton JBProducts_Buscar;
@@ -357,7 +330,5 @@ public class JFproductos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JButton volver_Producto;
-    public javax.swing.JButton volver_Producto1;
     // End of variables declaration//GEN-END:variables
 }

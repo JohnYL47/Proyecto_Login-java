@@ -8,12 +8,12 @@ package View;
  *
  * @author SENA
  */
-public class fclientes extends javax.swing.JInternalFrame {
+public class IFclientes extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form fclientes
      */
-    public fclientes() {
+    public IFclientes() {
         initComponents();
     }
 

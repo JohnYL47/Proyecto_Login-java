@@ -16,22 +16,19 @@ import java.util.*;
 public class Controlador implements ActionListener {
 
     ArrayList<ModelPerson> list_Person = new ArrayList<ModelPerson>();
-<<<<<<< HEAD
     ArrayList<Vendedor_Controller> list_Vendedor = new ArrayList<Vendedor_Controller>();
-    
-=======
     ArrayList<Vendedor> list_Vend = new ArrayList<Vendedor>();
     ArrayList<Productos> list_Product = new ArrayList<Productos>();
 
->>>>>>> solito
+
     fLogin vistalogin = new fLogin();
-<<<<<<< HEAD
+
     fclientes clientes = new fclientes();
     fproductos productos = new fproductos();
     fvendedor vendedor = new fvendedor();
     fadmin admin=new fadmin();
     
-=======
+
     JFcliente clientes = new JFcliente();
     JFproductos productos = new JFproductos();
     JFvendedor vendedor = new JFvendedor();
@@ -41,24 +38,22 @@ public class Controlador implements ActionListener {
     //LOGIN
     private String usuario;
     private String password;
-<<<<<<< HEAD
+
     //TABLA DE CLIENTE
-=======
+
     //TABLA DE CLIENTE,VENDEDOR
->>>>>>> solito
+
     private int Id;
     private int IdV;
     private String Nombre;
     private String NombreV;
     private String Apellido;
-<<<<<<< HEAD
     //TABLA VENDEDOR
     private int Idv;
     private String Nombrev;
     private String Apellidov;
-=======
     private String ApellidoV;
->>>>>>> solito
+
     //TABLA PRODUCTOS
     private int Id_Product;
     private String Nombre_Product;
@@ -81,15 +76,7 @@ public class Controlador implements ActionListener {
         this.productos.JBProducts_Mostrar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Buscar.addActionListener(this);
         this.vendedor.JBVENDEDOR_Mostrar.addActionListener(this);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.vendedor.JBACK_Vendedor.addActionListener(this);
-=======
-        
->>>>>>> main
-=======
-        this.vendedor.JBACK_Vendedor.addActionListener(this);
->>>>>>> solito
+
 
     } //Buttons
 

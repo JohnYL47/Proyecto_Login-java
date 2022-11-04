@@ -110,7 +110,7 @@ public class fadmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMclientesActionPerformed
-        fclientes p1= new fclientes();
+        IFclientes p1= new IFclientes();
         jDadmin.add(p1);
         p1.show();
      
@@ -121,7 +121,7 @@ public class fadmin extends javax.swing.JFrame {
     }//GEN-LAST:event_jMclientesActionPerformed
 
     private void jMproductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMproductosActionPerformed
-        fproductos p3= new fproductos();
+        IFproductos p3= new IFproductos();
         jDadmin.add(p3);
         p3.show();
        
@@ -129,7 +129,7 @@ public class fadmin extends javax.swing.JFrame {
     }//GEN-LAST:event_jMproductosActionPerformed
 
     private void jMvendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMvendedoresActionPerformed
-       fvendedor p2= new fvendedor();
+       IFvendedor p2= new IFvendedor();
         jDadmin.add(p2);
         p2.show();
     }//GEN-LAST:event_jMvendedoresActionPerformed
