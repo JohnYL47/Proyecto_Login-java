@@ -20,9 +20,9 @@ public class Controlador implements ActionListener {
     ArrayList<Productos> list_Product = new ArrayList<Productos>();
 
     fLogin vistalogin = new fLogin();
-    fcliente clientes = new fcliente();
-    fproductos productos = new fproductos();
-    fvendedor vendedor = new fvendedor();
+    JFcliente clientes = new JFcliente();
+    JFproductos productos = new JFproductos();
+    JFvendedor vendedor = new JFvendedor();
 
     //--------------List--------------------------//
     //SESION
