@@ -25,11 +25,17 @@ public class Controlador implements ActionListener {
 
 >>>>>>> solito
     fLogin vistalogin = new fLogin();
+<<<<<<< HEAD
     fclientes clientes = new fclientes();
     fproductos productos = new fproductos();
     fvendedor vendedor = new fvendedor();
     fadmin admin=new fadmin();
     
+=======
+    JFcliente clientes = new JFcliente();
+    JFproductos productos = new JFproductos();
+    JFvendedor vendedor = new JFvendedor();
+>>>>>>> solito
 
     //--------------List--------------------------//
     //LOGIN
